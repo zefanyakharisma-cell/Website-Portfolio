@@ -20,7 +20,7 @@ let currentSlideHero = 0;
 let currentPagesSlide = 0;
 let pagesAutoplay;
 
-function goToPage(pageName) {
+function goToPage(pageName, updateHash = true) {
   document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
   const page = document.getElementById(`page-${pageName}`);
   if (page) {
@@ -32,7 +32,16 @@ function goToPage(pageName) {
   document.getElementById('mobile-menu').classList.add('hidden');
   const app = document.getElementById('app');
   if (app) app.scrollTop = 0;
+  if (updateHash) {
+    const hash = pageName === 'home' ? '' : pageName;
+    history.pushState({ page: pageName }, '', hash ? `#${hash}` : location.pathname);
+  }
 }
+
+window.addEventListener('popstate', (e) => {
+  const page = e.state?.page || 'home';
+  goToPage(page, false);
+});
 
 function slideCarouselHero(direction) {
   const track = document.getElementById('carousel-track-hero');
@@ -210,6 +219,17 @@ pagesAutoplay = setInterval(() => slidePagesCarousel(1), 3500);
 // Inject hero banners then initialize lucide icons
 injectHeroBanners();
 lucide.createIcons();
+
+// Navigate to page from URL hash on load
+(function() {
+  const hash = location.hash.replace('#', '');
+  if (hash && document.getElementById(`page-${hash}`)) {
+    goToPage(hash, false);
+    history.replaceState({ page: hash }, '', location.hash);
+  } else {
+    history.replaceState({ page: 'home' }, '', location.pathname);
+  }
+})();
 
 // Touch swipe for hero carousel
 (function() {
