@@ -9,34 +9,34 @@ const AERO_BUDGET = {
       bg: 'linear-gradient(135deg,#faf5ff,#f3e8ff)', border: 'rgba(168,85,247,0.2)',
       total: 92812500,
       items: [
-        { name: 'Panggung Standard Outdoor 4×6m', qty: '1', total: 3000000 },
+        { name: 'Outdoor Standard Stage 4×6m', qty: '1', total: 3000000 },
         { name: 'Sound System 2000 watt', qty: '1', total: 3500000 },
-        { name: 'Misty Fan', qty: '10 unit', total: 4500000 },
-        { name: 'AC Standing (5 PK)', qty: '2 unit', total: 1800000 },
-        { name: 'Backdrop 4×6m (panggung)', qty: '1', total: 3800000 },
+        { name: 'Misty Fan', qty: '10 units', total: 4500000 },
+        { name: 'AC Standing Unit (5 PK)', qty: '2 units', total: 1800000 },
+        { name: 'Stage Backdrop 4×6m', qty: '1', total: 3800000 },
         { name: 'Frame Stage', qty: '1', total: 3500000 },
-        { name: 'Sewa TV 80"', qty: '1', total: 2000000 },
-        { name: 'Tenda Atas Panggung 4×6m', qty: '1', total: 1250000 },
-        { name: 'Tenda Depan Panggung 4×6m', qty: '1', total: 1250000 },
-        { name: 'Kursi Depan Panggung (cover)', qty: '20 kursi', total: 500000 },
-        { name: 'Tenda Sarnavil 3×3m (booth)', qty: '20 tenda', total: 13000000 },
-        { name: 'Tenda Sarnavil 5×5m (konsumsi & panitia)', qty: '2 tenda', total: 3000000 },
-        { name: 'Meja IBM 60×180 (booth)', qty: '40 meja', total: 6000000 },
-        { name: 'Meja IBM 60×180 (konsumsi)', qty: '2 meja', total: 300000 },
-        { name: 'Kursi Futura + Cover (booth)', qty: '80 kursi', total: 2000000 },
-        { name: 'Kursi Futura + Cover (panitia & konsumsi)', qty: '10 kursi', total: 250000 },
-        { name: 'Print Banner Nama Negara/Universitas', qty: '20 banner', total: 2000000 },
-        { name: 'Stop Kontak', qty: '40 unit', total: 3000000 },
-        { name: 'Paket Photobooth (4 jam unlimited)', qty: '1', total: 4500000 },
-        { name: 'Gate Event (pintu masuk)', qty: '1', total: 8500000 },
-        { name: 'Umbul-Umbul (sekitar venue)', qty: '10 lembar', total: 4500000 },
-        { name: 'Bendera Festival (dekorasi)', qty: '20 pcs', total: 1500000 },
-        { name: 'Tiket Kota Tua + Jeep (city tour)', qty: '30 tiket', total: 2250000 },
-        { name: 'Honor Tour Guide Kota Tua', qty: '2 orang', total: 1000000 },
-        { name: 'Parkir Bus City Tour', qty: '2', total: 100000 },
-        { name: 'Voucher Superindo (mahasiswa asing)', qty: '10 voucher', total: 5000000 },
-        { name: 'Voucher TBMO', qty: '1 voucher', total: 500000 },
-        { name: 'Pajak (Tax)', qty: '—', total: 10312500 },
+        { name: 'TV Rental 80"', qty: '1', total: 2000000 },
+        { name: 'Stage Roof Tent 4×6m', qty: '1', total: 1250000 },
+        { name: 'Front Stage Tent 4×6m', qty: '1', total: 1250000 },
+        { name: 'Front Stage Chairs (with cover)', qty: '20 chairs', total: 500000 },
+        { name: 'Sarnavil Tent 3×3m (booth)', qty: '20 tents', total: 13000000 },
+        { name: 'Sarnavil Tent 5×5m (catering & committee)', qty: '2 tents', total: 3000000 },
+        { name: 'IBM Table 60×180 (booth)', qty: '40 tables', total: 6000000 },
+        { name: 'IBM Table 60×180 (catering)', qty: '2 tables', total: 300000 },
+        { name: 'Futura Chair + Cover (booth)', qty: '80 chairs', total: 2000000 },
+        { name: 'Futura Chair + Cover (committee & catering)', qty: '10 chairs', total: 250000 },
+        { name: 'Country / University Name Banner Print', qty: '20 banners', total: 2000000 },
+        { name: 'Power Extension Sockets', qty: '40 units', total: 3000000 },
+        { name: 'Photobooth Package (4 hours unlimited)', qty: '1', total: 4500000 },
+        { name: 'Event Gate (entrance)', qty: '1', total: 8500000 },
+        { name: 'Festival Flag Banners (around venue)', qty: '10 sheets', total: 4500000 },
+        { name: 'Festival Pennant Flags (decoration)', qty: '20 pcs', total: 1500000 },
+        { name: 'Old Town + Jeep Tour Tickets (city tour)', qty: '30 tickets', total: 2250000 },
+        { name: 'Tour Guide Fee — Old Town Surabaya', qty: '2 persons', total: 1000000 },
+        { name: 'City Tour Bus Parking', qty: '2', total: 100000 },
+        { name: 'Superindo Voucher (international students)', qty: '10 vouchers', total: 5000000 },
+        { name: 'TBMO Voucher', qty: '1 voucher', total: 500000 },
+        { name: 'Tax', qty: '—', total: 10312500 },
       ]
     },
     {
@@ -44,7 +44,7 @@ const AERO_BUDGET = {
       bg: 'linear-gradient(135deg,#f0f9ff,#e0f2fe)', border: 'rgba(14,165,233,0.2)',
       total: 20000000,
       items: [
-        { name: 'Room Breakfast — Zoom Hotel Dharmahusada', qty: '20 kamar × 2 hari', total: 20000000 },
+        { name: 'Room with Breakfast — Zoom Hotel Dharmahusada', qty: '20 rooms × 2 nights', total: 20000000 },
       ]
     },
     {
@@ -52,13 +52,13 @@ const AERO_BUDGET = {
       bg: 'linear-gradient(135deg,#fff7ed,#ffedd5)', border: 'rgba(249,115,22,0.2)',
       total: 17250000,
       items: [
-        { name: 'Makan Siang — 9 Mei', qty: '100 orang', total: 3500000 },
-        { name: 'Snack Siang — 9 Mei', qty: '100 orang', total: 1500000 },
-        { name: 'Makan Malam / Dinner — 9 Mei', qty: '100 orang', total: 7500000 },
-        { name: 'Makan Siang — 10 Mei', qty: '50 orang', total: 1750000 },
-        { name: 'Snack — 10 Mei', qty: '50 orang', total: 750000 },
-        { name: 'Makanan Vegetarian', qty: '50 orang', total: 1250000 },
-        { name: 'Air Mineral', qty: '20 dus', total: 1000000 },
+        { name: 'Lunch — May 9', qty: '100 persons', total: 3500000 },
+        { name: 'Afternoon Snack — May 9', qty: '100 persons', total: 1500000 },
+        { name: 'Dinner — May 9', qty: '100 persons', total: 7500000 },
+        { name: 'Lunch — May 10', qty: '50 persons', total: 1750000 },
+        { name: 'Snack — May 10', qty: '50 persons', total: 750000 },
+        { name: 'Vegetarian Meals', qty: '50 persons', total: 1250000 },
+        { name: 'Mineral Water', qty: '20 boxes', total: 1000000 },
       ]
     },
     {
@@ -66,12 +66,12 @@ const AERO_BUDGET = {
       bg: 'linear-gradient(135deg,#f0fdf4,#dcfce7)', border: 'rgba(16,185,129,0.2)',
       total: 19600000,
       items: [
-        { name: 'Driver & Kernet (3 hari)', qty: '2 orang', total: 900000 },
-        { name: 'Cleaning Service (bantu bersihin venue)', qty: '10 orang', total: 1000000 },
-        { name: 'Panitia AGE & Logistik', qty: '25 orang', total: 12500000 },
-        { name: 'Magang (Intern)', qty: '15 orang', total: 3000000 },
-        { name: 'Honor Sharing Session Alumni', qty: '2 jam', total: 1800000 },
-        { name: 'MC Mahasiswa', qty: '1 kegiatan', total: 400000 },
+        { name: 'Driver & Assistant (3 days)', qty: '2 persons', total: 900000 },
+        { name: 'Cleaning Service (venue cleaning)', qty: '10 persons', total: 1000000 },
+        { name: 'AGE Committee & Logistics Staff', qty: '25 persons', total: 12500000 },
+        { name: 'Interns', qty: '15 persons', total: 3000000 },
+        { name: 'Alumni Sharing Session Fee', qty: '2 hours', total: 1800000 },
+        { name: 'Student MC', qty: '1 event', total: 400000 },
       ]
     },
   ],
@@ -188,50 +188,6 @@ const AERO_RUNDOWN = [
   },
 ];
 
-const AERO_COMMITTEE = [
-  { no: 1, div: 'Registrasi & Administrasi', pic: 'Firo, Zadina', color: '#a855f7', icon: 'clipboard-check', tasks: [
-    'Menyiapkan persuratan dan administrasi',
-    'Menyiapkan daftar absensi peserta dan panitia',
-    'Menerbitkan Letter of Invitation bagi peserta yang membutuhkan',
-    'Menyiapkan QR registrasi pengunjung mahasiswa Unair',
-    'Registrasi peserta (ID Card)',
-    'Bersurat undangan networking dinner ke perwakilan Fakultas',
-    'Issuing certificate untuk peserta penjaga booth',
-  ]},
-  { no: 2, div: 'Perlengkapan & Transportasi', pic: 'Duriati, Sahrul', color: '#0ea5e9', icon: 'truck', tasks: [
-    'Peminjaman ruangan, venue, dan perlengkapan',
-    'Menjaga dan menyiapkan kebutuhan perlengkapan',
-    'Mengatur transportasi Hotel – Venue – Hotel',
-    'Menjadi operator saat Global Talks, AERO Spotlight & Networking Dinner',
-  ]},
-  { no: 3, div: 'Acara & Surabaya City Tour', pic: 'Dian, Indra', color: '#f97316', icon: 'calendar-days', tasks: [
-    'Menyiapkan keseluruhan acara dan networking dinner',
-    'Menentukan tujuan Surabaya City Tour',
-    'Berkoordinasi dengan EO',
-    'Melakukan koordinasi panitia secara berkala',
-  ]},
-  { no: 4, div: 'Konsumsi & PIC Bazaar', pic: 'Melly, Nastiti', color: '#ec4899', icon: 'utensils', tasks: [
-    'Menyiapkan konsumsi peserta dan panitia (meal box & snack box)',
-    'Menghubungi vendor bazaar untuk membuka booth',
-    'Mengorganisir bazaar sebelum dan selama acara',
-  ]},
-  { no: 5, div: 'Publikasi & Dokumentasi', pic: 'Diffa, Ehud', color: '#10b981', icon: 'camera', tasks: [
-    'Promosi pre-event: Instagram, website, email blast, poster',
-    'Membuat teaser dan backdrop acara',
-    'Mendokumentasikan acara sebagai live report IG',
-    'Membuat berita pasca acara',
-  ]},
-  { no: 6, div: 'PR — Liaison Officer (LO)', pic: 'Joshua (Zefanya)', color: '#a855f7', icon: 'handshake', highlight: true, tasks: [
-    'Menjadi advokat acara untuk publik, mitra, dan stakeholder UNAIR',
-    'Mendampingi mitra internasional selama acara berlangsung',
-    'Mengkoordinir penugasan LO dan tim volunteer di setiap divisi',
-  ]},
-  { no: 7, div: 'Bendahara & Hotel', pic: 'Mas Rocky, Lusy', color: '#64748b', icon: 'wallet', tasks: [
-    'Berkoordinasi dengan hotel terkait akomodasi peserta',
-    'Mengkoordinir keuangan dan SPJ',
-    'Berkoordinasi dengan vendor EO dan PLP',
-  ]},
-];
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -291,39 +247,6 @@ function buildAeroContributions() {
     </div>`;
 }
 
-function buildAeroCommittee() {
-  const cards = AERO_COMMITTEE.map(d => {
-    const tasks = d.tasks.map(t => `<li class="text-sm" style="color:#64748B">${aeroEsc(t)}</li>`).join('');
-    const border = d.highlight
-      ? `border:2px solid ${d.color}`
-      : 'border:1px solid rgba(56,189,248,0.1)';
-    const bgIcon = d.color === '#a855f7' ? 'rgba(168,85,247,0.1)'
-      : d.color === '#0ea5e9' ? 'rgba(14,165,233,0.1)'
-      : d.color === '#f97316' ? 'rgba(249,115,22,0.1)'
-      : d.color === '#ec4899' ? 'rgba(236,72,153,0.1)'
-      : d.color === '#10b981' ? 'rgba(16,185,129,0.1)'
-      : 'rgba(100,116,139,0.1)';
-    return `
-      <div class="rounded-xl p-5" style="background:#F8FAFC;${border}">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background:${bgIcon}">
-            <i data-lucide="${d.icon}" style="width:18px;height:18px;color:${d.color}"></i>
-          </div>
-          <div>
-            <p class="font-heading font-semibold text-sm" style="color:#0F172A">${d.no}. ${aeroEsc(d.div)}</p>
-            <p class="text-xs" style="color:${d.color}">PIC: ${aeroEsc(d.pic)}</p>
-          </div>
-        </div>
-        <ul class="space-y-1 list-disc list-inside">${tasks}</ul>
-      </div>`;
-  }).join('');
-  return `
-    <div class="card p-8 mb-6">
-      <div class="flex items-center gap-3 mb-2"><span class="accent-line"></span><h2 class="font-heading font-semibold text-2xl" style="color:#0F172A">Committee Structure</h2></div>
-      <p class="text-sm mb-6" style="color:#64748B">7 divisions · my role is highlighted in purple.</p>
-      <div class="grid md:grid-cols-2 gap-4">${cards}</div>
-    </div>`;
-}
 
 function buildAeroRundown() {
   const sections = AERO_RUNDOWN.map(s => {
@@ -414,60 +337,27 @@ function buildAeroParticipants() {
 }
 
 function buildAeroBudget() {
-  const catCards = AERO_BUDGET.categories.map(cat => `
-    <div class="rounded-xl p-5 text-center" style="background:${cat.bg};border:1px solid ${cat.border}">
-      <div class="w-10 h-10 rounded-lg flex items-center justify-center mx-auto mb-3" style="background:rgba(0,0,0,0.05)">
+  const catRows = AERO_BUDGET.categories.map(cat => `
+    <div class="flex items-center gap-4 p-4 rounded-xl" style="background:${cat.bg};border:1px solid ${cat.border}">
+      <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(0,0,0,0.06)">
         <i data-lucide="${cat.icon}" style="width:20px;height:20px;color:${cat.color}"></i>
       </div>
-      <p class="font-heading font-bold text-base mb-1" style="color:${cat.color}">${fmtRp(cat.total)}</p>
-      <p class="text-xs font-semibold" style="color:#0F172A">${aeroEsc(cat.name)}</p>
+      <p class="text-sm font-semibold flex-1" style="color:#0F172A">${aeroEsc(cat.name)}</p>
+      <p class="font-heading font-bold text-base" style="color:${cat.color}">${fmtRp(cat.total)}</p>
     </div>`).join('');
-
-  const catTables = AERO_BUDGET.categories.map(cat => {
-    const rows = cat.items.map(item => `
-      <tr style="border-bottom:1px solid #F1F5F9">
-        <td class="py-2 pr-4 text-sm" style="color:#0F172A">${aeroEsc(item.name)}</td>
-        <td class="py-2 pr-4 text-xs text-center" style="color:#64748B">${aeroEsc(item.qty)}</td>
-        <td class="py-2 text-sm font-semibold text-right whitespace-nowrap" style="color:${cat.color}">${fmtRp(item.total)}</td>
-      </tr>`).join('');
-    return `
-      <div class="mb-6">
-        <div class="flex items-center gap-2 mb-3">
-          <div class="w-6 h-6 rounded flex items-center justify-center" style="background:rgba(0,0,0,0.05)">
-            <i data-lucide="${cat.icon}" style="width:14px;height:14px;color:${cat.color}"></i>
-          </div>
-          <h4 class="font-heading font-semibold text-base" style="color:#0F172A">${aeroEsc(cat.name)}</h4>
-          <span class="ml-auto text-sm font-bold" style="color:${cat.color}">${fmtRp(cat.total)}</span>
-        </div>
-        <div class="rounded-xl overflow-hidden" style="border:1px solid rgba(56,189,248,0.1)">
-          <table class="w-full" style="border-collapse:collapse">
-            <thead><tr style="background:#F8FAFC">
-              <th class="py-2 px-4 text-left text-xs font-semibold" style="color:#64748B">Item</th>
-              <th class="py-2 px-4 text-center text-xs font-semibold" style="color:#64748B">Qty</th>
-              <th class="py-2 px-4 text-right text-xs font-semibold" style="color:#64748B">Total</th>
-            </tr></thead>
-            <tbody class="divide-y">${rows}</tbody>
-          </table>
-        </div>
-      </div>`;
-  }).join('');
 
   return `
     <div class="card p-8 mb-6">
-      <div class="flex items-center gap-3 mb-2"><span class="accent-line"></span><h2 class="font-heading font-semibold text-2xl" style="color:#0F172A">Budget (RAB)</h2></div>
-      <p class="text-sm mb-6" style="color:#64748B">Rencana Anggaran Biaya — AERO 2025</p>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">${catCards}</div>
-
-      <div class="rounded-xl p-5 mb-8 flex items-center justify-between" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff);border:2px solid rgba(168,85,247,0.3)">
+      <div class="flex items-center gap-3 mb-2"><span class="accent-line"></span><h2 class="font-heading font-semibold text-2xl" style="color:#0F172A">Budget Overview</h2></div>
+      <p class="text-sm mb-6" style="color:#64748B">Budget breakdown across 4 categories — AERO 2025</p>
+      <div class="space-y-3 mb-6">${catRows}</div>
+      <div class="rounded-xl p-5 flex items-center justify-between" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff);border:2px solid rgba(168,85,247,0.3)">
         <div>
           <p class="text-sm font-semibold" style="color:#64748B">Grand Total</p>
           <p class="font-heading font-bold text-2xl mt-1" style="color:#a855f7">${fmtRp(AERO_BUDGET.grandTotal)}</p>
         </div>
         <i data-lucide="receipt" style="width:40px;height:40px;color:#a855f7;opacity:0.3"></i>
       </div>
-
-      ${catTables}
     </div>`;
 }
 
@@ -488,36 +378,9 @@ function aeroInitPage() {
     </div>
     ${buildAeroWhatToExpect()}
     ${buildAeroContributions()}
-    ${buildAeroCommittee()}
-    ${buildAeroRundown()}
     ${buildAeroParticipants()}
+    ${buildAeroRundown()}
     ${buildAeroBudget()}
-    <div class="card p-8 mt-6">
-     <div class="flex items-center gap-3 mb-2"><span class="accent-line"></span><h2 class="font-heading font-semibold text-2xl" style="color:#0F172A">Program Documents</h2></div>
-     <p class="text-sm mb-6" style="color:#64748B">Supporting documentation for AERO 2025 — program proposal and participant data.</p>
-     <div class="grid sm:grid-cols-2 gap-4">
-      <a href="./assets/data/AERO 2025.docx" download class="flex items-center gap-4 rounded-xl p-5 transition-all duration-200 hover:shadow-md" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff);border:1px solid rgba(168,85,247,0.2);text-decoration:none">
-       <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(168,85,247,0.15)">
-        <i data-lucide="file-text" style="width:24px;height:24px;color:#a855f7"></i>
-       </div>
-       <div class="flex-1 min-w-0">
-        <p class="font-semibold text-sm" style="color:#0F172A">AERO 2025.docx</p>
-        <p class="text-xs mt-0.5" style="color:#94A3B8">Program Proposal Document</p>
-       </div>
-       <i data-lucide="download" style="width:18px;height:18px;color:#a855f7;flex-shrink:0"></i>
-      </a>
-      <a href="./assets/data/AERO.xlsx" download class="flex items-center gap-4 rounded-xl p-5 transition-all duration-200 hover:shadow-md" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff);border:1px solid rgba(168,85,247,0.2);text-decoration:none">
-       <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(168,85,247,0.15)">
-        <i data-lucide="table-2" style="width:24px;height:24px;color:#a855f7"></i>
-       </div>
-       <div class="flex-1 min-w-0">
-        <p class="font-semibold text-sm" style="color:#0F172A">AERO.xlsx</p>
-        <p class="text-xs mt-0.5" style="color:#94A3B8">Participant Data & Budget Spreadsheet</p>
-       </div>
-       <i data-lucide="download" style="width:18px;height:18px;color:#a855f7;flex-shrink:0"></i>
-      </a>
-     </div>
-    </div>
    </div>`;
 
   if (window.lucide) lucide.createIcons();

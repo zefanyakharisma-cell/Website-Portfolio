@@ -1,3 +1,110 @@
+// ── Skill Discovery Data ────────────────────────────────────
+const discoveryItems = [
+  { id: 'partnerships', title: 'International Partnership Management', category: 'Experience', description: 'Managing 30+ institutional partners, reviewing 25+ MoU/MoA agreements monthly at Petra Christian University.', skills: ['International Partnership', 'Leadership', 'Systems Thinking', 'Cross-Cultural Communication'], page: 'partnerships', accent: '#4A6B8A' },
+  { id: 'mou', title: 'MoU / MoA Coordination', category: 'Experience', description: 'Formalizing academic partnerships through strategic agreements — ensuring compliance and institutional alignment.', skills: ['International Partnership', 'Leadership', 'Systems Thinking'], page: 'mou', accent: '#4A6B8A' },
+  { id: 'amerta', title: 'AMERTA Exchange Program', category: 'Project', description: "Universitas Airlangga's flagship semester exchange — 120+ students, IDR 50–100M budget per cohort.", skills: ['Student Mobility', 'Project Management', 'International Partnership', 'Leadership', 'Student Support'], page: 'amerta', accent: '#6B4F32' },
+  { id: 'aci', title: 'ACI — Airlangga Cultural Immersion', category: 'Project', description: 'Structured engagement program connecting international and local students through cultural experience.', skills: ['Student Mobility', 'Project Management', 'Student Support', 'Cross-Cultural Communication'], page: 'aci', accent: '#6B4F32' },
+  { id: 'aero', title: 'AERO Exhibition', category: 'Project', description: 'Annual exhibition at Universitas Airlangga showcasing global partnerships and international programs.', skills: ['Project Management', 'International Partnership', 'Branding', 'Creative Direction'], page: 'aero', accent: '#6B4F32' },
+  { id: 'pcu-global', title: 'PCU Global — International Office Website', category: 'Project', description: "Rebuilding PCU's International Office online presence with a full-stack web app, news CMS, partnership directory, and mobile-first design.", skills: ['Full-Stack Development', 'Front-End Development', 'UI/UX Design', 'International Partnership', 'Digital Strategy', 'Web Experience', 'Branding'], page: 'pcu-global', accent: '#003087' },
+  { id: 'onboarding', title: 'Student Onboarding & Orientation', category: 'Experience', description: 'End-to-end welfare support for 100+ international students per semester — housing, healthcare, immigration.', skills: ['Student Support', 'Student Mobility', 'Cross-Cultural Communication', 'Systems Thinking'], page: 'onboarding', accent: '#4A5235' },
+  { id: 'engagement', title: 'Student Engagement Initiatives', category: 'Experience', description: 'Building meaningful connections and fostering personal growth for exchange students through curated programs.', skills: ['Student Support', 'Leadership', 'Cross-Cultural Communication'], page: 'engagement', accent: '#4A5235' },
+  { id: 'websites', title: 'Web Development & Design', category: 'Creative', description: 'Responsive, user-centered websites for institutional communications and international engagement.', skills: ['Full-Stack Development', 'Front-End Development', 'UI/UX Design', 'Web Experience', 'Digital Strategy'], page: 'websites', accent: '#8B7355' },
+  { id: 'designs', title: 'Graphic Design & Branding', category: 'Creative', description: 'Strategic visual design for institutional identity, event collateral, and international partnerships.', skills: ['Branding', 'Creative Direction', 'UI/UX Design', 'Digital Strategy'], page: 'designs', accent: '#8B7355' },
+  { id: 'expertise', title: 'Areas of Expertise', category: 'About', description: 'Core competencies built through 3+ years in international higher education and creative digital work.', skills: ['International Partnership', 'Student Mobility', 'Project Management', 'Internationalization', 'Leadership'], page: 'expertise', accent: '#1E3A5F' },
+  { id: 'croissantsmoon', title: 'CroissantsMoon — Creative Identity', category: 'Creative', description: 'A future-facing boutique studio identity in development — editorial design, web experiences, brand systems.', skills: ['Branding', 'Creative Direction', 'UI/UX Design', 'Digital Strategy', 'Web Experience', 'Full-Stack Development'], page: 'croissantsmoon', accent: '#8B7355' },
+  { id: 'writing', title: 'Writing & Reflections', category: 'Writing', description: 'Essays and insights on international education, leadership, systems thinking, and digital craft.', skills: ['Writing', 'Leadership', 'Internationalization', 'Digital Strategy', 'Systems Thinking'], page: 'writing', accent: '#5C5C5C' },
+  { id: 'skillset', title: 'Full Skillset Overview', category: 'About', description: 'A complete map of technical, professional, and creative competencies.', skills: ['International Partnership', 'Student Mobility', 'Project Management', 'Leadership', 'UI/UX Design', 'Full-Stack Development', 'Branding', 'Systems Thinking', 'Writing'], page: 'skillset', accent: '#1C1C1E' },
+];
+
+let selectedSkills = [];
+
+function toggleSkill(btn) {
+  const skill = btn.dataset.skill;
+  if (selectedSkills.includes(skill)) {
+    selectedSkills = selectedSkills.filter(s => s !== skill);
+    btn.classList.remove('selected');
+  } else {
+    selectedSkills.push(skill);
+    btn.classList.add('selected');
+  }
+  const discoverBtn = document.getElementById('discover-btn');
+  const clearBtn = document.getElementById('clear-skills-btn');
+  if (selectedSkills.length > 0) {
+    discoverBtn.style.opacity = '1';
+    discoverBtn.style.pointerEvents = 'auto';
+    if (clearBtn) clearBtn.style.display = 'inline';
+  } else {
+    discoverBtn.style.opacity = '.45';
+    discoverBtn.style.pointerEvents = 'none';
+    if (clearBtn) clearBtn.style.display = 'none';
+  }
+}
+
+function clearSkills() {
+  selectedSkills = [];
+  document.querySelectorAll('.skill-tag').forEach(t => t.classList.remove('selected'));
+  const discoverBtn = document.getElementById('discover-btn');
+  const clearBtn = document.getElementById('clear-skills-btn');
+  if (discoverBtn) { discoverBtn.style.opacity = '.45'; discoverBtn.style.pointerEvents = 'none'; }
+  if (clearBtn) clearBtn.style.display = 'none';
+}
+
+function discoverRelatedWorks() {
+  if (selectedSkills.length === 0) return;
+  renderDiscoveryResults(selectedSkills);
+  goToPage('skill-discovery');
+}
+
+function renderDiscoveryResults(skills) {
+  const display = document.getElementById('selected-skills-display');
+  const grid = document.getElementById('results-grid');
+  const noResults = document.getElementById('no-results');
+  if (!display || !grid) return;
+
+  display.innerHTML = skills.map(s => `<span class="skill-tag selected">${s}</span>`).join('');
+
+  const matches = discoveryItems.filter(item =>
+    item.skills.some(s => skills.includes(s))
+  ).sort((a, b) => {
+    const aScore = a.skills.filter(s => skills.includes(s)).length;
+    const bScore = b.skills.filter(s => skills.includes(s)).length;
+    return bScore - aScore;
+  });
+
+  if (matches.length === 0) {
+    grid.innerHTML = '';
+    if (noResults) noResults.classList.remove('hidden');
+    return;
+  }
+  if (noResults) noResults.classList.add('hidden');
+
+  grid.innerHTML = matches.map(item => `
+    <button onclick="goToPage('${item.page}')" class="result-card p-7 text-left w-full" style="border-left:3px solid ${item.accent}">
+      <div style="font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:${item.accent};margin-bottom:10px">${item.category}</div>
+      <h3 class="font-heading font-semibold text-base mb-3 leading-snug" style="color:#1C1C1E">${item.title}</h3>
+      <p class="text-xs leading-relaxed mb-4" style="color:#5C5C5C">${item.description}</p>
+      <div class="flex flex-wrap gap-1.5 mb-4">${item.skills.filter(s => skills.includes(s)).map(s => `<span class="tag">${s}</span>`).join('')}</div>
+      <div class="flex items-center gap-2 text-xs font-medium" style="color:${item.accent}">View <i data-lucide="arrow-right" style="width:12px;height:12px"></i></div>
+    </button>
+  `).join('');
+  lucide.createIcons();
+}
+
+function filterArticles(category) {
+  document.querySelectorAll('.writing-filter').forEach(btn => {
+    btn.classList.remove('selected');
+    if (btn.dataset.category === category) btn.classList.add('selected');
+  });
+  document.querySelectorAll('#articles-grid .article-card').forEach(card => {
+    card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
+  });
+}
+
+function openArticle(id) {
+  // Articles are currently in-page only — future expansion
+  console.log('Article:', id);
+}
+
 const defaultConfig = {
   hero_name: 'Zefanya Kharisma Nugroho',
   hero_title: 'International Partnership Specialist',
@@ -106,7 +213,7 @@ function updatePagesCarouselDots() {
 
 function applyConfig(config) {
   const c = key => config[key] || defaultConfig[key];
-  document.getElementById('nav-name').textContent = c('hero_name').split(' ')[0].substring(0, 1) + c('hero_name').split(' ')[1].substring(0, 1);
+  document.getElementById('nav-name').textContent = 'ZKN';
   const teaserEl = document.getElementById('about-teaser-text');
   if (teaserEl) teaserEl.textContent = c('about_text');
   document.getElementById('contact-email-el').textContent = c('contact_email');
@@ -178,7 +285,7 @@ const heroConfigs = {
   'mou': { back: 'partnerships', backLabel: 'Back', category: 'Global Partnerships', title: 'MoU / MoA Coordination', desc: 'Formalizing academic partnerships through strategic agreements.', gradient: '#7C2D12 0%, #EA580C 60%, #FB923C 100%' },
   'websites': { back: 'home', backLabel: 'Back', category: 'Creative Services', title: 'Web Development & Design', desc: 'Responsive, user-centered websites for institutional communications and international engagement.', gradient: '#7F1D1D 0%, #DC2626 60%, #F87171 100%' },
   'designs': { back: 'home', backLabel: 'Back', category: 'Creative Services', title: 'Graphic Design & Branding', desc: 'Strategic visual design for institutional identity and international partnerships.', gradient: '#7F1D1D 0%, #DC2626 60%, #F87171 100%' },
-  'contact': { back: 'home', backLabel: 'Back', category: 'Get in Touch', title: "Let's Connect", desc: 'Open to international partnerships, collaborations, and meaningful conversations about global education.', gradient: '#1E293B 0%, #334155 60%, #64748B 100%' }
+  'contact': { back: 'home', backLabel: 'Back', category: 'Get in Touch', title: "Let's Connect", desc: 'Open to international partnerships, collaborations, and meaningful conversations about global education.', gradient: '#1C1C1E 0%, #2C2C2E 60%, #5C5C5C 100%' }
 };
 
 function injectHeroBanners() {
@@ -211,8 +318,8 @@ function injectHeroBanners() {
   });
 }
 
-// Initialize carousels
-updateCarouselDotsHero();
+// Initialize carousels (guard against missing elements)
+if (document.getElementById('carousel-track-hero')) updateCarouselDotsHero();
 updatePagesCarouselDots();
 pagesAutoplay = setInterval(() => slidePagesCarousel(1), 3500);
 
@@ -231,9 +338,10 @@ lucide.createIcons();
   }
 })();
 
-// Touch swipe for hero carousel
+// Touch swipe for hero carousel (only if present)
 (function() {
   var track = document.getElementById('carousel-track-hero');
+  if (!track) return;
   var startX = 0;
   track.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
   track.addEventListener('touchend', function(e) {
