@@ -40,7 +40,7 @@ const CM_WORKS = [
   },
   {
     emoji: '◈', title: 'Graphic Design', cat: 'Visual Design',
-    desc: 'Institutional identity, event collateral, and visual materials for international education programs.',
+    desc: '9 communication design projects — guidebooks, presentations, and institutional materials for international education.',
     bg: CM.mint, textColor: '#065F46', page: 'designs', rotate: '1.2deg',
   },
   {

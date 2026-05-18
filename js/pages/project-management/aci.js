@@ -4,11 +4,11 @@ const ACI_DATA = {
   all: {
     label: 'All Batches', period: '2024 – 2025',
     participants: 191, batches: 4, countries: 25, locations: 3,
-    color: '#10B981', bg: 'linear-gradient(135deg,#F0FDF4,#DCFCE7)', border: 'rgba(16,185,129,0.15)',
+    color: '#4A5235', bg: 'linear-gradient(135deg,#F1F3EE,#E4E8DC)', border: 'rgba(74,82,53,0.15)',
     budgetTotal: 236566376,
     budgetNote: 'Combined realization across 4 batches. Batch 1 2025 budget is estimated from line items.',
     budgetCategories: [
-      { name: 'Activities/Events',   amount: 97134000, color: '#10B981' },
+      { name: 'Activities/Events',   amount: 97134000, color: '#4A5235' },
       { name: 'Accommodation',       amount: 60760000, color: '#2563EB' },
       { name: 'Transport',           amount: 37501000, color: '#F97316' },
       { name: 'Food & Beverages',    amount: 26479000, color: '#8B5CF6' },
@@ -49,7 +49,7 @@ const ACI_DATA = {
     natNote: 'Nationality data is fully available for 3 of 4 batches (144 participants). ACI 2025 Batch 1 has partial data due to spreadsheet formula errors; Malaysia (19 via IUP program) is confirmed.',
     programs: [
       { name: 'AMERTA Exchange',              count: 97, color: '#2563EB' },
-      { name: 'Regular IUP',                  count: 19, color: '#10B981' },
+      { name: 'Regular IUP',                  count: 19, color: '#4A5235' },
       { name: 'ADS (Airlangga Darmasiswa)',    count: 19, color: '#F97316' },
       { name: 'KNB (Kemitraan Negara Berkembang)', count: 25, color: '#8B5CF6' },
       { name: 'TIAS (TIAS Program)',           count: 9,  color: '#EC4899' },
@@ -97,7 +97,7 @@ const ACI_DATA = {
     budgetAlloc: 111000000,
     budgetCategories: [
       { name: 'Transport (Bus)',    amount: 31191000, color: '#F97316' },
-      { name: 'Activities/Events', amount: 30094000, color: '#10B981' },
+      { name: 'Activities/Events', amount: 30094000, color: '#4A5235' },
       { name: 'Accommodation',     amount: 19200000, color: '#2563EB' },
       { name: 'Food & Beverages',  amount: 7150000,  color: '#8B5CF6' },
       { name: 'Consumables',       amount: 5494000,  color: '#EC4899' },
@@ -128,7 +128,7 @@ const ACI_DATA = {
     ],
     programs: [
       { name: 'AMERTA XX',                    count: 21, color: '#2563EB' },
-      { name: 'Regular IUP',                  count: 12, color: '#10B981' },
+      { name: 'Regular IUP',                  count: 12, color: '#4A5235' },
       { name: 'ADS 2023',                     count: 8,  color: '#F97316' },
       { name: 'KNB 2023',                     count: 7,  color: '#8B5CF6' },
       { name: 'ADS 2024',                     count: 3,  color: '#EC4899' },
@@ -184,7 +184,7 @@ const ACI_DATA = {
     budgetTotal: 50800200,
     budgetAlloc: null,
     budgetCategories: [
-      { name: 'Activities/Events', amount: 28910000, color: '#10B981' },
+      { name: 'Activities/Events', amount: 28910000, color: '#4A5235' },
       { name: 'Accommodation',     amount: 12860000, color: '#2563EB' },
       { name: 'Food & Beverages',  amount: 3690000,  color: '#8B5CF6' },
       { name: 'Consumables',       amount: 3640200,  color: '#EC4899' },
@@ -196,7 +196,7 @@ const ACI_DATA = {
       { country: 'Other / Not Available', flag: '🌍', count: 28 },
     ],
     programs: [
-      { name: 'Regular IUP 2024',     count: 19, color: '#10B981' },
+      { name: 'Regular IUP 2024',     count: 19, color: '#4A5235' },
       { name: 'AMERTA XXII',          count: 12, color: '#2563EB' },
       { name: 'KNB 2024',             count: 6,  color: '#8B5CF6' },
       { name: 'TIAS 2024',            count: 5,  color: '#EC4899' },
@@ -254,7 +254,7 @@ const ACI_DATA = {
     budgetTotal: 44447176,
     budgetAlloc: 60899800,
     budgetCategories: [
-      { name: 'Activities/Events', amount: 19530000, color: '#10B981' },
+      { name: 'Activities/Events', amount: 19530000, color: '#4A5235' },
       { name: 'Accommodation',     amount: 13200000, color: '#2563EB' },
       { name: 'Transport',         amount: 3310000,  color: '#F97316' },
       { name: 'Food & Beverages',  amount: 5478000,  color: '#8B5CF6' },
@@ -320,7 +320,7 @@ const ACI_DATA = {
     budgetTotal: 45360000,
     budgetAlloc: null,
     budgetCategories: [
-      { name: 'Activities/Events', amount: 19500000, color: '#10B981' },
+      { name: 'Activities/Events', amount: 19500000, color: '#4A5235' },
       { name: 'Accommodation',     amount: 15500000, color: '#2563EB' },
       { name: 'Food & Beverages',  amount: 6060000,  color: '#8B5CF6' },
       { name: 'Consumables',       amount: 2700000,  color: '#EC4899' },
@@ -419,12 +419,12 @@ function aciBuildOverview(key) {
 
 function aciBuildVendors(d) {
   if (!d.vendors) return '';
-  const catColors = { Hotel: '#2563EB', Venue: '#10B981', Food: '#F97316', Shirts: '#8B5CF6', Konsumsi: '#F97316' };
+  const catColors = { Hotel: '#1E3A5F', Venue: '#4A5235', Food: '#F97316', Shirts: '#8B5CF6', Konsumsi: '#F97316' };
   const rows = d.vendors.map(v => {
     const col = catColors[v.category] || '#64748B';
-    return `<div class="rounded-lg p-4" style="background:#F8FAFC;border:1px solid rgba(56,189,248,0.1)">
+    return `<div class="rounded-lg p-4" style="background:#F8FAFC;border:1px solid rgba(74,107,138,0.1)">
       <div class="flex items-start gap-3">
-        <span class="text-xs font-semibold px-2 py-0.5 rounded-full flex-shrink-0 mt-0.5" style="background:${col}20;color:${col}">${aciEsc(v.category)}</span>
+        <span class="text-xs font-semibold px-2 py-0.5 rounded-full flex-shrink-0 mt-0.5" style="background:${col}18;color:${col}">${aciEsc(v.category)}</span>
         <div>
           <p class="text-sm font-semibold mb-1" style="color:#0F172A">${aciEsc(v.name)}</p>
           <p class="text-xs leading-relaxed" style="color:#64748B">${aciEsc(v.desc)}</p>
@@ -433,7 +433,7 @@ function aciBuildVendors(d) {
     </div>`;
   }).join('');
   const acts = d.activities ? d.activities.map(a =>
-    `<li class="flex gap-2 text-sm" style="color:#475569"><span style="color:#10B981;flex-shrink:0">▸</span>${aciEsc(a)}</li>`
+    `<li class="flex gap-2 text-sm" style="color:#475569"><span style="color:#4A5235;flex-shrink:0">▸</span>${aciEsc(a)}</li>`
   ).join('') : '';
   return `<h3 class="font-heading font-semibold text-lg mb-4" style="color:#0F172A">Vendors</h3>
   <div class="grid md:grid-cols-2 gap-3 mb-8">${rows}</div>
@@ -457,12 +457,12 @@ function aciBuildVendorsOverall() {
     { batch: '2025 Solo',     name: 'Zest Hotel Surakarta',         category: 'Hotel',  desc: 'Central Solo hotel for Batch 2.1. City-center location enabled walkable access to Mangkunegaran.' },
     { batch: '2025 Mojokerto',name: 'Hotel Royal Tretes',           category: 'Hotel',  desc: 'Mountain resort hotel in Trawas area for Batch 2.2. Scenic highland setting.' },
   ];
-  const catColors = { Hotel: '#2563EB', Venue: '#10B981', Food: '#F97316', Shirts: '#8B5CF6' };
+  const catColors = { Hotel: '#1E3A5F', Venue: '#4A5235', Food: '#F97316', Shirts: '#8B5CF6' };
   const rows = allVendors.map(v => {
     const col = catColors[v.category] || '#64748B';
-    return `<div class="rounded-lg p-4" style="background:#F8FAFC;border:1px solid rgba(56,189,248,0.1)">
+    return `<div class="rounded-lg p-4" style="background:#F8FAFC;border:1px solid rgba(74,107,138,0.1)">
       <div class="flex items-start gap-3">
-        <span class="text-xs font-semibold px-2 py-0.5 rounded-full flex-shrink-0 mt-0.5" style="background:${col}20;color:${col}">${aciEsc(v.category)}</span>
+        <span class="text-xs font-semibold px-2 py-0.5 rounded-full flex-shrink-0 mt-0.5" style="background:${col}18;color:${col}">${aciEsc(v.category)}</span>
         <div class="flex-1">
           <div class="flex justify-between items-start gap-2">
             <p class="text-sm font-semibold mb-1" style="color:#0F172A">${aciEsc(v.name)}</p>
@@ -500,11 +500,11 @@ function aciBuildBudget(key, d) {
   if (alloc) {
     const efficiency = ((1 - total / alloc) * 100).toFixed(0);
     summaryHtml += `<div><p class="font-heading font-bold text-2xl" style="color:#64748B">${aciFormatIDR(alloc)}</p><p class="text-xs" style="color:#64748B">Budget Allocated</p></div>
-    <div><p class="font-heading font-bold text-2xl" style="color:#10B981">${efficiency}% saved</p><p class="text-xs" style="color:#64748B">Budget Efficiency</p></div>`;
+    <div><p class="font-heading font-bold text-2xl" style="color:#4A5235">${efficiency}% saved</p><p class="text-xs" style="color:#64748B">Budget Efficiency</p></div>`;
   }
   if (d.participants) {
     const perPax = Math.round(total / d.participants);
-    summaryHtml += `<div><p class="font-heading font-bold text-2xl" style="color:#2563EB">${aciFormatIDR(perPax)}</p><p class="text-xs" style="color:#64748B">Per Participant</p></div>`;
+    summaryHtml += `<div><p class="font-heading font-bold text-2xl" style="color:#1E3A5F">${aciFormatIDR(perPax)}</p><p class="text-xs" style="color:#64748B">Per Participant</p></div>`;
   }
   summaryHtml += '</div>';
 
@@ -514,7 +514,7 @@ function aciBuildBudget(key, d) {
       const note = b.budget ? ` / ${aciFormatIDR(b.budget)} alloc` : ' (no formal allocation recorded)';
       return `<div class="flex items-center justify-between py-2 border-b" style="border-color:rgba(241,245,249,1)">
         <span class="text-sm" style="color:#0F172A">${aciEsc(b.label)}</span>
-        <span class="text-sm font-semibold" style="color:#10B981">${aciFormatIDR(b.spent)}<span class="font-normal text-xs ml-1" style="color:#94A3B8">${note}</span></span>
+        <span class="text-sm font-semibold" style="color:#4A5235">${aciFormatIDR(b.spent)}<span class="font-normal text-xs ml-1" style="color:#94A3B8">${note}</span></span>
       </div>`;
     }).join('');
     overallBatches = `<h3 class="font-heading font-semibold text-base mb-3 mt-6" style="color:#0F172A">By Batch</h3>${bRows}`;
@@ -541,9 +541,9 @@ function aciBuildDemographics(key, d) {
       <span class="text-base w-7 flex-shrink-0">${n.flag}</span>
       <span class="text-sm w-32 flex-shrink-0" style="color:#0F172A">${aciEsc(n.country)}</span>
       <div class="flex-1 rounded-full overflow-hidden" style="background:#F1F5F9;height:10px">
-        <div class="h-full rounded-full" data-w="${barPct}%" style="width:0;background:linear-gradient(90deg,#10B981,#34D399);transition:width .55s ease"></div>
+        <div class="h-full rounded-full" data-w="${barPct}%" style="width:0;background:linear-gradient(90deg,#4A5235,#6B7455);transition:width .55s ease"></div>
       </div>
-      <span class="text-sm font-semibold w-8 text-right" style="color:#10B981">${n.count}</span>
+      <span class="text-sm font-semibold w-8 text-right" style="color:#4A5235">${n.count}</span>
       <span class="text-xs w-9 text-right" style="color:#94A3B8">${share}%</span>
     </div>`;
   }).join('');
@@ -574,13 +574,13 @@ function aciBuildDemographics(key, d) {
       <div class="flex-1">
         <div class="flex rounded-full overflow-hidden" style="height:20px">
           <div style="width:${fPct}%;background:#EC4899" title="Female ${d.gender.F}"></div>
-          <div style="width:${mPct}%;background:#2563EB" title="Male ${d.gender.M}"></div>
+          <div style="width:${mPct}%;background:#1E3A5F" title="Male ${d.gender.M}"></div>
         </div>
       </div>
     </div>
     <div class="flex gap-6 mb-8">
       <div class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full" style="background:#EC4899"></span><span class="text-sm" style="color:#0F172A">Female <strong>${d.gender.F}</strong> (${fPct}%)</span></div>
-      <div class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full" style="background:#2563EB"></span><span class="text-sm" style="color:#0F172A">Male <strong>${d.gender.M}</strong> (${mPct}%)</span></div>
+      <div class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full" style="background:#1E3A5F"></span><span class="text-sm" style="color:#0F172A">Male <strong>${d.gender.M}</strong> (${mPct}%)</span></div>
     </div>${note}`;
   } else if (d.gender === null) {
     genderHtml = `<h3 class="font-heading font-semibold text-lg mb-2" style="color:#0F172A">Gender Distribution</h3>
@@ -604,7 +604,7 @@ function aciBuildSatisfaction(d) {
   if (!sat) return '';
 
   const sortedCriteria = [...sat.criteria].sort((a, b) => b.score - a.score);
-  const scoreColor = (pct) => pct >= 95 ? '#10B981' : pct >= 85 ? '#2563EB' : pct >= 75 ? '#F97316' : '#EF4444';
+  const scoreColor = (pct) => pct >= 95 ? '#4A5235' : pct >= 85 ? '#1E3A5F' : pct >= 75 ? '#F97316' : '#EF4444';
 
   const bars = sortedCriteria.map(c => {
     const pct = ((c.score / c.max) * 100).toFixed(1);
@@ -623,7 +623,6 @@ function aciBuildSatisfaction(d) {
   const overallCol = scoreColor(parseFloat(overallPct));
   const noteHtml = sat.note ? `<p class="text-xs mb-4" style="color:#94A3B8">${aciEsc(sat.note)}</p>` : '';
 
-  // Overall gauge-style display
   const gaugeFill = overallPct;
   const gaugeHtml = `<div class="flex items-center gap-6 mb-6">
     <div class="relative" style="width:80px;height:80px">
@@ -650,11 +649,11 @@ function aciBuildSatisfaction(d) {
 
 function aciBuildSatisfactionOverall(d) {
   const batches = d.satisfaction.batches;
-  const scoreColor = (pct) => pct >= 95 ? '#10B981' : pct >= 85 ? '#2563EB' : pct >= 75 ? '#F97316' : '#EF4444';
+  const scoreColor = (pct) => pct >= 95 ? '#4A5235' : pct >= 85 ? '#1E3A5F' : pct >= 75 ? '#F97316' : '#EF4444';
   const cards = batches.map(b => {
     const col = scoreColor(b.pct);
     const gaugeFill = b.pct;
-    return `<div class="rounded-xl p-5 text-center" style="background:#F8FAFC;border:1px solid rgba(56,189,248,0.1)">
+    return `<div class="rounded-xl p-5 text-center" style="background:#F8FAFC;border:1px solid rgba(74,107,138,0.1)">
       <div class="relative mx-auto mb-3" style="width:72px;height:72px">
         <svg viewBox="0 0 80 80" style="width:72px;height:72px;transform:rotate(-90deg)">
           <circle cx="40" cy="40" r="32" fill="none" stroke="#F1F5F9" stroke-width="8"/>
@@ -685,8 +684,7 @@ function aciBuildAnalysis(d) {
       <p class="text-sm leading-relaxed" style="color:#475569">${a.text}</p>
     </div>`
   ).join('');
-  const color = d.color || '#10B981';
-  return `<div class="rounded-xl p-6" style="background:linear-gradient(135deg,#F8FAFC,#F0FDF4);border:1px solid rgba(16,185,129,0.1)">
+  return `<div class="rounded-xl p-6" style="background:linear-gradient(135deg,#F1F3EE,#E4E8DC);border:1px solid rgba(74,82,53,0.12)">
     <h3 class="font-heading font-semibold text-base mb-4" style="color:#0F172A">Batch Analysis</h3>
     <div class="space-y-3">${items}</div>
   </div>`;
@@ -697,93 +695,72 @@ function aciBuildAnalysis(d) {
 function aciInitPage() {
   const el = document.getElementById('page-aci');
   if (!el) return;
+
+  const steps = [
+    { n:'01', icon:'map-pin',        title:'Destination Planning & Venue Curation',           desc:'Selected culturally meaningful and logistically feasible destinations each batch — from botanical gardens and royal palaces to Majapahit heritage villages and mountain adventure parks. Venue selection balanced cultural depth, accessibility, and budget constraints.' },
+    { n:'02', icon:'handshake',      title:'Vendor Coordination & Contract Management',       desc:'Managed relationships with hotels, venues, catering services, transport providers, and activity organizers. Negotiated pricing, confirmed logistics, and ensured services aligned with program needs within the allocated budget.' },
+    { n:'03', icon:'users',          title:'Participant Registration & Communication',         desc:'Managed participant sign-ups, program guidebooks, pre-trip briefings, and all communications. Coordinated shirt sizing, dietary needs, and participant readiness across diverse student populations from 25+ countries.' },
+    { n:'04', icon:'clipboard-list', title:'Budget Planning & Financial Reporting',            desc:'Prepared Rencana Anggaran Biaya (RAB) for each batch, tracked realization against allocations, and submitted post-event financial reports. Maintained cost efficiency from IDR 95M (2024) down to IDR 44–50M per batch in 2025.' },
+    { n:'05', icon:'mountain-snow',  title:'On-Site Program Delivery',                        desc:'Led on-ground operations during each 2-day program: coordinating transport arrivals, managing time schedules at each venue, facilitating intercultural interaction, and ensuring participant safety and comfort throughout the trip.' },
+    { n:'06', icon:'star',           title:'Post-Event Reporting & Continuous Improvement',   desc:'Collected satisfaction surveys after each batch, analyzed feedback, and applied learnings to subsequent programs — such as replacing Kebun Raya with the more interactive Desa Wisata Pujon Kidul based on 2024 participant input.' },
+  ];
+
+  const stepsHtml = steps.map(s => `
+   <div class="flex gap-6 py-8" style="border-top:1px solid rgba(28,28,30,0.07)">
+    <div class="flex-shrink-0 w-10 pt-0.5">
+     <span class="font-heading font-bold text-3xl select-none" style="color:rgba(28,28,30,0.1);line-height:1">${s.n}</span>
+    </div>
+    <div class="flex gap-4 flex-1">
+     <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background:rgba(74,82,53,0.1)">
+      <i data-lucide="${s.icon}" style="width:18px;height:18px;color:#4A5235"></i>
+     </div>
+     <div>
+      <h3 class="font-heading font-semibold text-lg mb-2" style="color:#1C1C1E">${s.title}</h3>
+      <p class="text-sm leading-relaxed" style="color:#5C5C5C">${s.desc}</p>
+     </div>
+    </div>
+   </div>
+  `).join('');
+
   el.innerHTML = `
+   <div class="page-hero-banner relative overflow-hidden" style="background:linear-gradient(135deg,#4A5235 0%,#5C6642 60%,#6B7455 100%);padding:64px 0 48px">
+    <div class="absolute -right-16 -top-16 w-80 h-80 rounded-full" style="background:rgba(255,255,255,0.04)"></div>
+    <div class="absolute right-24 bottom-8 w-48 h-48 rounded-full" style="border:2px solid rgba(255,255,255,0.06)"></div>
+    <div class="absolute inset-0 flex items-center justify-end overflow-hidden pr-8 pointer-events-none select-none" aria-hidden="true">
+     <span class="font-heading font-bold" style="font-size:clamp(6rem,20vw,16rem);color:rgba(255,255,255,0.05);letter-spacing:-.04em;line-height:1">ACI</span>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+     <button onclick="goToPage('projects-overview')" class="flex items-center gap-2 mb-8" style="color:rgba(255,255,255,0.7)"><i data-lucide="arrow-left" style="width:16px;height:16px"></i> Back</button>
+     <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold mb-5 uppercase tracking-wider" style="background:rgba(255,255,255,0.12);color:#fff">Project Management</span>
+     <h1 class="font-heading font-bold mb-3 text-white" style="font-size:clamp(2.5rem,6vw,4rem);letter-spacing:-.02em">ACI</h1>
+     <p class="text-base max-w-2xl" style="color:rgba(255,255,255,0.75)">Airlangga Cultural Immersion — 2-day cultural immersion trips for international students, managed end-to-end across 4 batches and 3 destinations in Java.</p>
+    </div>
+   </div>
    <div class="max-w-6xl mx-auto px-6">
-    <button onclick="goToPage('projects-overview')" class="flex items-center gap-2 mb-6" style="color:#2563EB"><i data-lucide="arrow-left" style="width:16px;height:16px"></i> Back</button>
-    <div class="card p-8 mb-8" style="background:linear-gradient(135deg,#10b981,#6ee7b7)">
-     <h1 class="font-heading font-bold text-4xl mb-3 text-white">ACI</h1>
-     <p class="text-lg text-white/90">Airlangga Cultural Immersion</p>
+    <div class="flex flex-wrap gap-10 py-10" style="border-bottom:1px solid rgba(28,28,30,0.08)">
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">191</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Total Participants</div></div>
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">4</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Batches</div></div>
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">25+</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Nationalities</div></div>
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">IDR 236M</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Total Budget</div></div>
     </div>
-    <div class="mb-8">
-     <p class="text-lg max-w-4xl leading-relaxed" style="color:#64748B">As part of the Airlangga Global Engagement team, I coordinated the full delivery of ACI — a 2-day cultural immersion trip for international students studying at Universitas Airlangga. Each batch brought together exchange, scholarship, and degree students from diverse programs, and took them beyond campus to experience Indonesian culture, heritage, and nature firsthand. My responsibilities spanned logistics, vendor management, participant coordination, and post-event reporting across 4 batches and 3 destinations.</p>
-    </div>
-    <div class="space-y-6 mb-8">
-     <div class="card p-8 border-l-4" style="border-color:#10B981">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(16,185,129,0.1)">
-        <i data-lucide="map-pin" style="width:28px;height:28px;color:#10B981"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">1. Destination Planning &amp; Venue Curation</h3>
-        <p style="color:#64748B">Selected culturally meaningful and logistically feasible destinations each batch — from botanical gardens and royal palaces to Majapahit heritage villages and mountain adventure parks. Venue selection balanced cultural depth, accessibility, and budget constraints.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#2563EB">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(37,99,235,0.1)">
-        <i data-lucide="handshake" style="width:28px;height:28px;color:#2563EB"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">2. Vendor Coordination &amp; Contract Management</h3>
-        <p style="color:#64748B">Managed relationships with hotels, venues, catering services, transport providers, and activity organizers. Negotiated pricing, confirmed logistics, and ensured services aligned with program needs within the allocated budget.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#F97316">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(249,115,22,0.1)">
-        <i data-lucide="users" style="width:28px;height:28px;color:#F97316"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">3. Participant Registration &amp; Communication</h3>
-        <p style="color:#64748B">Managed participant sign-ups, program guidebooks, pre-trip briefings, and all communications. Coordinated shirt sizing, dietary needs, and participant readiness across diverse student populations from 25+ countries.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#8B5CF6">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(139,92,246,0.1)">
-        <i data-lucide="clipboard-list" style="width:28px;height:28px;color:#8B5CF6"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">4. Budget Planning &amp; Financial Reporting</h3>
-        <p style="color:#64748B">Prepared Rencana Anggaran Biaya (RAB) for each batch, tracked realization against allocations, and submitted post-event financial reports. Maintained cost efficiency from IDR 95M (2024) down to IDR 44–50M per batch in 2025.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#EC4899">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(236,72,153,0.1)">
-        <i data-lucide="mountain-snow" style="width:28px;height:28px;color:#EC4899"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">5. On-Site Program Delivery</h3>
-        <p style="color:#64748B">Led on-ground operations during each 2-day program: coordinating transport arrivals, managing time schedules at each venue, facilitating intercultural interaction, and ensuring participant safety and comfort throughout the trip.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#14B8A6">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(20,184,166,0.1)">
-        <i data-lucide="star" style="width:28px;height:28px;color:#14B8A6"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">6. Post-Event Reporting &amp; Continuous Improvement</h3>
-        <p style="color:#64748B">Collected satisfaction surveys after each batch, analyzed feedback, and applied learnings to subsequent programs — such as replacing Kebun Raya with the more interactive Desa Wisata Pujon Kidul based on 2024 participant input.</p>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="card p-8 mt-6">
-     <div class="flex items-center gap-3 mb-2"><span class="accent-line"></span><h2 class="font-heading font-semibold text-2xl" style="color:#0F172A">Program Data &amp; Analytics</h2></div>
-     <p class="text-sm mb-6" id="aci-stats-subtitle" style="color:#64748B">Data compiled from 4 ACI batches across 191 participants, 25+ nationalities, and 3 destinations.</p>
+   </div>
+   <div class="max-w-6xl mx-auto px-6 py-14">
+    <p class="text-lg max-w-3xl leading-relaxed mb-14" style="color:#5C5C5C">As coordinator of ACI at Airlangga Global Engagement, I managed the full delivery of 4 cultural immersion trips for international students — spanning logistics, vendor management, participant coordination, budget planning, and post-event reporting across Malang, Solo, and Mojokerto.</p>
+    <div class="flex items-center gap-3 mb-3"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#4A5235">Program Process</span></div>
+    <h2 class="font-heading font-bold text-3xl mb-2" style="color:#1C1C1E">End-to-End Responsibilities</h2>
+    <div class="mt-6">${stepsHtml}</div>
+   </div>
+   <div style="background:#F2ECE4;border-top:1px solid rgba(28,28,30,0.07)">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+     <div class="flex items-center gap-3 mb-3"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#4A5235">Data &amp; Analytics</span></div>
+     <h2 class="font-heading font-bold text-3xl mb-2" style="color:#1C1C1E">Program Data &amp; Analytics</h2>
+     <p class="text-sm mb-8" id="aci-stats-subtitle" style="color:#5C5C5C">Data compiled from 4 ACI batches across 191 participants, 25+ nationalities, and 3 destinations.</p>
      <div class="flex flex-wrap gap-2 mb-8">
-      <button class="aci-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="all" style="cursor:pointer;background:#10B981;color:#fff;border-color:#10B981">All Batches</button>
-      <button class="aci-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="b1_2024" style="cursor:pointer;color:#64748B;border-color:rgba(100,116,139,0.3)">2024 Malang</button>
-      <button class="aci-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="b1_2025" style="cursor:pointer;color:#64748B;border-color:rgba(100,116,139,0.3)">2025 Malang</button>
-      <button class="aci-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="b21_2025" style="cursor:pointer;color:#64748B;border-color:rgba(100,116,139,0.3)">2025 Solo</button>
-      <button class="aci-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="b22_2025" style="cursor:pointer;color:#64748B;border-color:rgba(100,116,139,0.3)">2025 Mojokerto</button>
+      <button class="aci-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="all" style="cursor:pointer;background:#4A5235;color:#fff;border-color:#4A5235">All Batches</button>
+      <button class="aci-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="b1_2024" style="cursor:pointer;color:#5C5C5C;border-color:rgba(28,28,30,0.2)">2024 Malang</button>
+      <button class="aci-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="b1_2025" style="cursor:pointer;color:#5C5C5C;border-color:rgba(28,28,30,0.2)">2025 Malang</button>
+      <button class="aci-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="b21_2025" style="cursor:pointer;color:#5C5C5C;border-color:rgba(28,28,30,0.2)">2025 Solo</button>
+      <button class="aci-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="b22_2025" style="cursor:pointer;color:#5C5C5C;border-color:rgba(28,28,30,0.2)">2025 Mojokerto</button>
      </div>
      <div id="aci-stats-content"></div>
     </div>
@@ -799,8 +776,8 @@ function aciRenderBatch(key) {
   document.querySelectorAll('.aci-batch-tab').forEach(tab => {
     const active = tab.dataset.batch === key;
     tab.style.background  = active ? d.color : '';
-    tab.style.color       = active ? '#fff'  : '#64748B';
-    tab.style.borderColor = active ? d.color : 'rgba(100,116,139,0.3)';
+    tab.style.color       = active ? '#fff'  : '#5C5C5C';
+    tab.style.borderColor = active ? d.color : 'rgba(28,28,30,0.2)';
   });
 
   const sub = document.getElementById('aci-stats-subtitle');

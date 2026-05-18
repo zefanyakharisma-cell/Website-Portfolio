@@ -4,7 +4,7 @@ const AMERTA_DATA = {
   all: {
     label: 'All Batches', period: '2024 – 2027',
     students: 207, countries: 14, uniCount: 24,
-    color: '#2563EB', bg: 'linear-gradient(135deg,#EFF6FF,#DBEAFE)', border: 'rgba(37,99,235,0.15)',
+    color: '#1E3A5F', bg: 'linear-gradient(135deg,#EEF2F7,#D8E5EF)', border: 'rgba(30,58,95,0.15)',
     nationalities: [
       { country: 'Malaysia',    flag: '🇲🇾', count: 114 },
       { country: 'Philippines', flag: '🇵🇭', count: 29  },
@@ -394,9 +394,9 @@ function buildNationalities(d) {
       <span class="text-base w-7 flex-shrink-0">${n.flag}</span>
       <span class="text-sm w-28 flex-shrink-0" style="color:#0F172A">${esc(n.country)}</span>
       <div class="flex-1 rounded-full overflow-hidden" style="background:#F1F5F9;height:10px">
-        <div class="h-full rounded-full" data-w="${barPct}%" style="width:0;background:linear-gradient(90deg,#2563EB,#38BDF8);transition:width .55s ease"></div>
+        <div class="h-full rounded-full" data-w="${barPct}%" style="width:0;background:linear-gradient(90deg,#1E3A5F,#4A6B8A);transition:width .55s ease"></div>
       </div>
-      <span class="text-sm font-semibold w-8 text-right" style="color:#2563EB">${n.count}</span>
+      <span class="text-sm font-semibold w-8 text-right" style="color:#1E3A5F">${n.count}</span>
       <span class="text-xs w-9 text-right" style="color:#94A3B8">${sharePct}%</span>
     </div>`;
   }).join('');
@@ -411,14 +411,14 @@ function buildUniversities(d) {
   const cards = d.universities.map(g => {
     const items = g.items.map(item => {
       const badge = item.count != null
-        ? `<span class="text-xs font-semibold px-2 py-0.5 rounded-full flex-shrink-0" style="background:#EFF6FF;color:#2563EB">${item.count}</span>`
+        ? `<span class="text-xs font-semibold px-2 py-0.5 rounded-full flex-shrink-0" style="background:rgba(30,58,95,0.1);color:#1E3A5F">${item.count}</span>`
         : '';
       return `<div class="flex justify-between items-center gap-2">
         <span class="text-sm" style="color:#0F172A">${esc(item.name)}</span>${badge}
       </div>`;
     }).join('');
-    return `<div class="rounded-lg p-4" style="background:#F8FAFC;border:1px solid rgba(56,189,248,0.1)">
-      <p class="text-xs font-semibold mb-2" style="color:#2563EB">${esc(g.region)}</p>
+    return `<div class="rounded-lg p-4" style="background:#F8FAFC;border:1px solid rgba(74,107,138,0.12)">
+      <p class="text-xs font-semibold mb-2" style="color:#1E3A5F">${esc(g.region)}</p>
       <div class="space-y-1.5">${items}</div>
     </div>`;
   }).join('');
@@ -442,9 +442,9 @@ function buildFaculties(d) {
     return `<div class="flex items-center gap-3">
       <span class="text-sm w-52 flex-shrink-0" style="color:#0F172A">${esc(f.name)}</span>
       <div class="flex-1 rounded-full overflow-hidden" style="background:#F1F5F9;height:10px">
-        <div class="h-full rounded-full" data-w="${pct}%" style="width:0;background:linear-gradient(90deg,#2563EB,#38BDF8);transition:width .55s ease"></div>
+        <div class="h-full rounded-full" data-w="${pct}%" style="width:0;background:linear-gradient(90deg,#1E3A5F,#4A6B8A);transition:width .55s ease"></div>
       </div>
-      <span class="text-sm font-semibold w-8 text-right" style="color:#2563EB">${f.count}</span>
+      <span class="text-sm font-semibold w-8 text-right" style="color:#1E3A5F">${f.count}</span>
     </div>`;
   }).join('');
   return `<h3 class="font-heading font-semibold text-lg mb-2" style="color:#0F172A">Faculty Enrollment at Airlangga</h3>
@@ -459,7 +459,7 @@ function buildAnalysis(d) {
       <p class="text-sm leading-relaxed" style="color:#475569">${a.text}</p>
     </div>`
   ).join('');
-  return `<div class="rounded-xl p-6" style="background:linear-gradient(135deg,#F8FAFC,#EFF6FF);border:1px solid rgba(37,99,235,0.1)">
+  return `<div class="rounded-xl p-6" style="background:linear-gradient(135deg,#EEF2F7,#D8E5EF);border:1px solid rgba(30,58,95,0.12)">
     <h3 class="font-heading font-semibold text-base mb-4" style="color:#0F172A">Batch Analysis</h3>
     <div class="space-y-3">${items}</div>
   </div>`;
@@ -470,115 +470,74 @@ function buildAnalysis(d) {
 function amertaInitPage() {
   const el = document.getElementById('page-amerta');
   if (!el) return;
+
+  const steps = [
+    { n:'01', icon:'mail',            title:'Institutional Outreach & Student Recruitment',   desc:'Coordinated with international partner universities regarding program promotion, student nominations, application processes, and recruitment timelines. Managed communication with both institutional representatives and prospective exchange students.' },
+    { n:'02', icon:'presentation',    title:'Pre-Departure Orientation',                      desc:'Organized pre-departure orientation sessions covering academic systems, Indonesian culture, immigration procedures, accommodation guidance, and student preparedness before arrival in Indonesia.' },
+    { n:'03', icon:'book-open-check', title:'Academic Coordination & Credit Transfer',        desc:'Managed course mapping and credit transfer processes between Universitas Airlangga and international partner institutions. Bridged communication between faculties, academic coordinators, and students to ensure smooth academic recognition.' },
+    { n:'04', icon:'plane-landing',   title:'Arrival, Visa, Immigration & Accommodation',     desc:'Managed airport pick-up services, accommodation arrangements, visa documentation, immigration coordination, and arrival logistics to ensure students experienced a smooth transition into Indonesia.' },
+    { n:'05', icon:'users',           title:'Arrival Orientation & Student Integration',       desc:'Conducted orientation sessions introducing students to campus life, academic systems, Indonesian culture, safety information, and student support services to help them adapt quickly.' },
+    { n:'06', icon:'clipboard-check', title:'Semester Monitoring & Student Support',           desc:'Monitored academic progress and student well-being throughout the semester by coordinating continuously with faculties, lecturers, and students. Ensured issues were addressed efficiently and student experiences remained positive.' },
+    { n:'07', icon:'mountain',        title:'Cultural Trips & Cultural Experiences',           desc:'Planned and managed cultural immersion activities, local trips, and intercultural experiences to help international students better understand Indonesian culture and strengthen cross-cultural engagement.' },
+    { n:'08', icon:'party-popper',    title:'Farewell Session & Program Closure',             desc:'Organized farewell sessions and program closure activities to celebrate student achievements, gather feedback, and maintain long-term institutional and student relationships.' },
+  ];
+
+  const stepsHtml = steps.map(s => `
+   <div class="flex gap-6 py-8" style="border-top:1px solid rgba(28,28,30,0.07)">
+    <div class="flex-shrink-0 w-10 pt-0.5">
+     <span class="font-heading font-bold text-3xl select-none" style="color:rgba(28,28,30,0.1);line-height:1">${s.n}</span>
+    </div>
+    <div class="flex gap-4 flex-1">
+     <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background:rgba(74,107,138,0.1)">
+      <i data-lucide="${s.icon}" style="width:18px;height:18px;color:#4A6B8A"></i>
+     </div>
+     <div>
+      <h3 class="font-heading font-semibold text-lg mb-2" style="color:#1C1C1E">${s.title}</h3>
+      <p class="text-sm leading-relaxed" style="color:#5C5C5C">${s.desc}</p>
+     </div>
+    </div>
+   </div>
+  `).join('');
+
   el.innerHTML = `
+   <div class="page-hero-banner relative overflow-hidden" style="background:linear-gradient(135deg,#1E3A5F 0%,#2D5A8A 60%,#4A6B8A 100%);padding:64px 0 48px">
+    <div class="absolute -right-16 -top-16 w-80 h-80 rounded-full" style="background:rgba(255,255,255,0.04)"></div>
+    <div class="absolute right-24 bottom-8 w-48 h-48 rounded-full" style="border:2px solid rgba(255,255,255,0.06)"></div>
+    <div class="absolute inset-0 flex items-center justify-end overflow-hidden pr-8 pointer-events-none select-none" aria-hidden="true">
+     <span class="font-heading font-bold" style="font-size:clamp(5rem,16vw,13rem);color:rgba(255,255,255,0.05);letter-spacing:-.04em;line-height:1">AMERTA</span>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+     <button onclick="goToPage('projects-overview')" class="flex items-center gap-2 mb-8" style="color:rgba(255,255,255,0.7)"><i data-lucide="arrow-left" style="width:16px;height:16px"></i> Back</button>
+     <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold mb-5 uppercase tracking-wider" style="background:rgba(255,255,255,0.12);color:#fff">Project Management</span>
+     <h1 class="font-heading font-bold mb-3 text-white" style="font-size:clamp(2.5rem,6vw,4rem);letter-spacing:-.02em">AMERTA</h1>
+     <p class="text-base max-w-2xl" style="color:rgba(255,255,255,0.75)">Airlangga Mobility, Exchange, Research &amp; Transfer Academic — Universitas Airlangga's flagship semester exchange, managed end-to-end across 4 batches.</p>
+    </div>
+   </div>
    <div class="max-w-6xl mx-auto px-6">
-    <button onclick="goToPage('projects-overview')" class="flex items-center gap-2 mb-6" style="color:#2563EB"><i data-lucide="arrow-left" style="width:16px;height:16px"></i> Back</button>
-    <div class="card p-8 mb-8" style="background:linear-gradient(135deg,#2563EB,#38BDF8)">
-     <h1 class="font-heading font-bold text-4xl mb-3 text-white">AMERTA</h1>
-     <p class="text-lg text-white/90">Semester Exchange Program</p>
+    <div class="flex flex-wrap gap-10 py-10" style="border-bottom:1px solid rgba(28,28,30,0.08)">
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">207</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Students (XXI–XXIV)</div></div>
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">14</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Countries</div></div>
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">24</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Partner Universities</div></div>
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">IDR 50–100M</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Budget / cohort</div></div>
     </div>
-    <div class="mb-8">
-     <p class="text-lg max-w-4xl leading-relaxed" style="color:#64748B">As Project Manager of the AMERTA Exchange Program at Airlangga Global Engagement, I managed the entire student mobility journey — from institutional outreach and student recruitment to academic coordination, cultural engagement, and farewell sessions. The role required strategic coordination across universities, faculties, immigration offices, vendors, and international students from multiple countries.</p>
-    </div>
-    <div class="space-y-6 mb-6">
-     <div class="card p-8 border-l-4" style="border-color:#2563EB">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(37,99,235,0.1)">
-        <i data-lucide="mail" style="width:28px;height:28px;color:#2563EB"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">1. Institutional Outreach &amp; Student Recruitment</h3>
-        <p style="color:#64748B">Coordinated with international partner universities regarding program promotion, student nominations, application processes, and recruitment timelines. Managed communication with both institutional representatives and prospective exchange students.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#10B981">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(16,185,129,0.1)">
-        <i data-lucide="presentation" style="width:28px;height:28px;color:#10B981"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">2. Pre-Departure Orientation</h3>
-        <p style="color:#64748B">Organized pre-departure orientation sessions covering academic systems, Indonesian culture, immigration procedures, accommodation guidance, and student preparedness before arrival in Indonesia.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#8B5CF6">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(139,92,246,0.1)">
-        <i data-lucide="book-open-check" style="width:28px;height:28px;color:#8B5CF6"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">3. Academic Coordination &amp; Credit Transfer</h3>
-        <p style="color:#64748B">Managed course mapping and credit transfer processes between Universitas Airlangga and international partner institutions. Bridged communication between faculties, academic coordinators, and students to ensure smooth academic recognition.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#F97316">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(249,115,22,0.1)">
-        <i data-lucide="plane-landing" style="width:28px;height:28px;color:#F97316"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">4. Arrival, Visa, Immigration &amp; Accommodation</h3>
-        <p style="color:#64748B">Managed airport pick-up services, accommodation arrangements, visa documentation, immigration coordination, and arrival logistics to ensure students experienced a smooth transition into Indonesia.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#EC4899">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(236,72,153,0.1)">
-        <i data-lucide="users" style="width:28px;height:28px;color:#EC4899"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">5. Arrival Orientation &amp; Student Integration</h3>
-        <p style="color:#64748B">Conducted orientation sessions introducing students to campus life, academic systems, Indonesian culture, safety information, and student support services to help them adapt quickly.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#0EA5E9">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(14,165,233,0.1)">
-        <i data-lucide="clipboard-check" style="width:28px;height:28px;color:#0EA5E9"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">6. Semester Monitoring &amp; Student Support</h3>
-        <p style="color:#64748B">Monitored academic progress and student well-being throughout the semester by coordinating continuously with faculties, lecturers, and students. Ensured issues were addressed efficiently and student experiences remained positive.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#14B8A6">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(20,184,166,0.1)">
-        <i data-lucide="mountain" style="width:28px;height:28px;color:#14B8A6"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">7. Cultural Trips &amp; Cultural Experiences</h3>
-        <p style="color:#64748B">Planned and managed cultural immersion activities, local trips, and intercultural experiences to help international students better understand Indonesian culture and strengthen cross-cultural engagement.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card p-8 border-l-4" style="border-color:#334155">
-      <div class="flex items-start gap-5">
-       <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(51,65,85,0.1)">
-        <i data-lucide="party-popper" style="width:28px;height:28px;color:#334155"></i>
-       </div>
-       <div>
-        <h3 class="font-heading font-bold text-xl mb-2" style="color:#0F172A">8. Farewell Session &amp; Program Closure</h3>
-        <p style="color:#64748B">Organized farewell sessions and program closure activities to celebrate student achievements, gather feedback, and maintain long-term institutional and student relationships.</p>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="card p-8 mt-6">
-     <div class="flex items-center gap-3 mb-2"><span class="accent-line"></span><h2 class="font-heading font-semibold text-2xl" style="color:#0F172A">Participant Statistics</h2></div>
-     <p class="text-sm mb-6" id="amerta-stats-subtitle" style="color:#64748B">Data compiled from AMERTA XXI–XXIV across 207 participants, 14 nationalities, and 24 partner universities.</p>
+   </div>
+   <div class="max-w-6xl mx-auto px-6 py-14">
+    <p class="text-lg max-w-3xl leading-relaxed mb-14" style="color:#5C5C5C">As Project Manager of AMERTA at Airlangga Global Engagement, I oversaw the entire student mobility journey — from institutional outreach and student recruitment to academic coordination, cultural programming, and program closure across 4 cohorts with IDR 50–100M budgets per program.</p>
+    <div class="flex items-center gap-3 mb-3"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#4A6B8A">Program Process</span></div>
+    <h2 class="font-heading font-bold text-3xl mb-2" style="color:#1C1C1E">End-to-End Responsibilities</h2>
+    <div class="mt-6">${stepsHtml}</div>
+   </div>
+   <div style="background:#F2ECE4;border-top:1px solid rgba(28,28,30,0.07)">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+     <div class="flex items-center gap-3 mb-3"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#4A6B8A">Data &amp; Analytics</span></div>
+     <h2 class="font-heading font-bold text-3xl mb-2" style="color:#1C1C1E">Participant Statistics</h2>
+     <p class="text-sm mb-8" id="amerta-stats-subtitle" style="color:#5C5C5C">Data compiled from AMERTA XXI–XXIV across 207 participants, 14 nationalities, and 24 partner universities.</p>
      <div class="flex flex-wrap gap-2 mb-8">
-      <button class="amerta-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="all" style="cursor:pointer;background:#2563EB;color:#fff;border-color:#2563EB">All Batches</button>
-      <button class="amerta-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="21" style="cursor:pointer;color:#64748B;border-color:rgba(100,116,139,0.3)">AMERTA XXI</button>
-      <button class="amerta-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="22" style="cursor:pointer;color:#64748B;border-color:rgba(100,116,139,0.3)">AMERTA XXII</button>
-      <button class="amerta-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="23" style="cursor:pointer;color:#64748B;border-color:rgba(100,116,139,0.3)">AMERTA XXIII</button>
-      <button class="amerta-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="24" style="cursor:pointer;color:#64748B;border-color:rgba(100,116,139,0.3)">AMERTA XXIV</button>
+      <button class="amerta-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="all" style="cursor:pointer;background:#1E3A5F;color:#fff;border-color:#1E3A5F">All Batches</button>
+      <button class="amerta-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="21" style="cursor:pointer;color:#5C5C5C;border-color:rgba(28,28,30,0.2)">AMERTA XXI</button>
+      <button class="amerta-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="22" style="cursor:pointer;color:#5C5C5C;border-color:rgba(28,28,30,0.2)">AMERTA XXII</button>
+      <button class="amerta-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="23" style="cursor:pointer;color:#5C5C5C;border-color:rgba(28,28,30,0.2)">AMERTA XXIII</button>
+      <button class="amerta-batch-tab px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200" data-batch="24" style="cursor:pointer;color:#5C5C5C;border-color:rgba(28,28,30,0.2)">AMERTA XXIV</button>
      </div>
      <div id="amerta-stats-content"></div>
     </div>
@@ -594,8 +553,8 @@ function amertaRenderBatch(key) {
   document.querySelectorAll('.amerta-batch-tab').forEach(tab => {
     const active       = tab.dataset.batch === key;
     tab.style.background  = active ? d.color : '';
-    tab.style.color       = active ? '#fff'  : '#64748B';
-    tab.style.borderColor = active ? d.color : 'rgba(100,116,139,0.3)';
+    tab.style.color       = active ? '#fff'  : '#5C5C5C';
+    tab.style.borderColor = active ? d.color : 'rgba(28,28,30,0.2)';
   });
 
   const sub = document.getElementById('amerta-stats-subtitle');

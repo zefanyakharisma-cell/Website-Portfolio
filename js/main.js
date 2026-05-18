@@ -284,7 +284,6 @@ const heroConfigs = {
   'mou-detail': { back: 'partnerships', backLabel: 'Back', category: 'Global Partnerships', title: 'MoU / MoA Coordination', desc: 'Reviewing 25+ partnership agreements per month — ensuring compliance and institutional alignment.', gradient: '#7C2D12 0%, #EA580C 60%, #FB923C 100%' },
   'mou': { back: 'partnerships', backLabel: 'Back', category: 'Global Partnerships', title: 'MoU / MoA Coordination', desc: 'Formalizing academic partnerships through strategic agreements.', gradient: '#7C2D12 0%, #EA580C 60%, #FB923C 100%' },
   'websites': { back: 'home', backLabel: 'Back', category: 'Creative Services', title: 'Web Development & Design', desc: 'Responsive, user-centered websites for institutional communications and international engagement.', gradient: '#7F1D1D 0%, #DC2626 60%, #F87171 100%' },
-  'designs': { back: 'home', backLabel: 'Back', category: 'Creative Services', title: 'Graphic Design & Branding', desc: 'Strategic visual design for institutional identity and international partnerships.', gradient: '#7F1D1D 0%, #DC2626 60%, #F87171 100%' },
   'contact': { back: 'home', backLabel: 'Back', category: 'Get in Touch', title: "Let's Connect", desc: 'Open to international partnerships, collaborations, and meaningful conversations about global education.', gradient: '#1C1C1E 0%, #2C2C2E 60%, #5C5C5C 100%' }
 };
 

@@ -36,6 +36,7 @@
         <button onclick="goToPage('aci')" class="w-full text-left block px-4 py-2 text-sm hover:bg-black/4 rounded-lg transition" style="color:#5C5C5C">ACI</button>
         <button onclick="goToPage('aero')" class="w-full text-left block px-4 py-2 text-sm hover:bg-black/4 rounded-lg transition" style="color:#5C5C5C">AERO</button>
         <button onclick="goToPage('pcu-global')" class="w-full text-left block px-4 py-2 text-sm hover:bg-black/4 rounded-lg transition" style="color:#5C5C5C">PCU Global</button>
+        <button onclick="goToPage('designs')" class="w-full text-left block px-4 py-2 text-sm hover:bg-black/4 rounded-lg transition" style="color:#5C5C5C">Graphic Design</button>
        </div>
       </div>
       <!-- International Education -->
@@ -53,13 +54,7 @@
       <!-- Writing -->
       <button onclick="goToPage('writing')" class="nav-link text-sm px-3 py-2 rounded-lg hover:bg-black/5 transition">Writing</button>
       <!-- Creative Services -->
-      <div class="relative group">
-       <button class="nav-link text-sm px-3 py-2 rounded-lg hover:bg-black/5 transition">Creative</button>
-       <div class="absolute left-0 mt-1 w-40 bg-white rounded-xl shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pt-1 pb-1" style="border-color:rgba(28,28,30,0.08)">
-        <button onclick="goToPage('websites')" class="w-full text-left block px-4 py-2 text-sm hover:bg-black/4 rounded-lg transition" style="color:#5C5C5C">Web Development</button>
-        <button onclick="goToPage('designs')" class="w-full text-left block px-4 py-2 text-sm hover:bg-black/4 rounded-lg transition" style="color:#5C5C5C">Graphic Design</button>
-       </div>
-      </div>
+      <button onclick="goToPage('websites')" class="nav-link text-sm px-3 py-2 rounded-lg hover:bg-black/5 transition">Web Dev</button>
       <button onclick="goToPage('contact')" class="ml-2 text-sm font-medium px-5 py-2 rounded-full transition" style="background:#1C1C1E;color:#fff">Contact</button>
      </div>
      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-black/5"><i data-lucide="menu" style="width:20px;height:20px;color:#1C1C1E"></i></button>
@@ -80,6 +75,7 @@
       <button onclick="goToPage('aci')" class="w-full text-left text-sm py-2 px-3 rounded hover:bg-black/5" style="color:#5C5C5C">ACI</button>
       <button onclick="goToPage('aero')" class="w-full text-left text-sm py-2 px-3 rounded hover:bg-black/5" style="color:#5C5C5C">AERO</button>
       <button onclick="goToPage('pcu-global')" class="w-full text-left text-sm py-2 px-3 rounded hover:bg-black/5" style="color:#5C5C5C">PCU Global</button>
+      <button onclick="goToPage('designs')" class="w-full text-left text-sm py-2 px-3 rounded hover:bg-black/5" style="color:#5C5C5C">Graphic Design</button>
      </div>
      <button class="mobile-menu-toggle w-full text-left text-sm py-2 px-3 rounded-lg hover:bg-black/5 transition flex items-center justify-between" data-menu="intl" style="color:#5C5C5C"> <span>Intl. Education</span> <i data-lucide="chevron-down" style="width:16px;height:16px"></i> </button>
      <div class="mobile-menu-content hidden pl-4 flex flex-col gap-0.5" id="intl-menu">
@@ -90,11 +86,7 @@
      </div>
      <button onclick="goToPage('croissantsmoon')" class="w-full text-left text-sm py-2 px-3 rounded-lg hover:bg-black/5 transition" style="color:#5C5C5C;font-family:'Playfair Display',serif;font-style:italic">CroissantsMoon</button>
      <button onclick="goToPage('writing')" class="w-full text-left text-sm py-2 px-3 rounded-lg hover:bg-black/5 transition" style="color:#5C5C5C">Writing</button>
-     <button class="mobile-menu-toggle w-full text-left text-sm py-2 px-3 rounded-lg hover:bg-black/5 transition flex items-center justify-between" data-menu="creative" style="color:#5C5C5C"> <span>Creative</span> <i data-lucide="chevron-down" style="width:16px;height:16px"></i> </button>
-     <div class="mobile-menu-content hidden pl-4 flex flex-col gap-0.5" id="creative-menu">
-      <button onclick="goToPage('websites')" class="w-full text-left text-sm py-2 px-3 rounded hover:bg-black/5" style="color:#5C5C5C">Web Development</button>
-      <button onclick="goToPage('designs')" class="w-full text-left text-sm py-2 px-3 rounded hover:bg-black/5" style="color:#5C5C5C">Graphic Design</button>
-     </div>
+     <button onclick="goToPage('websites')" class="w-full text-left text-sm py-2 px-3 rounded-lg hover:bg-black/5 transition" style="color:#5C5C5C">Web Dev</button>
      <button onclick="goToPage('contact')" class="text-sm font-medium py-2.5 px-5 rounded-full mt-2" style="background:#1C1C1E;color:#fff">Contact</button>
     </div>
    </nav><!-- PAGES CONTAINER -->
@@ -547,6 +539,11 @@
               <div class="flex items-center gap-2 mb-1.5"><span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold" style="background:rgba(30,58,95,0.1);color:#1E3A5F">Current</span></div>
               <h3 class="font-heading font-semibold text-lg" style="color:#1C1C1E">International Partnership</h3>
               <p class="text-sm font-medium mt-0.5" style="color:#1E3A5F">Petra Christian University · Surabaya</p>
+              <ul class="mt-2 space-y-1">
+               <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#1E3A5F;flex-shrink:0;margin-top:1px"></i>Manage 30+ institutional partners & review 25+ MoU/MoA monthly</li>
+               <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#1E3A5F;flex-shrink:0;margin-top:1px"></i>Facilitate 15+ strategic meetings per month</li>
+               <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#1E3A5F;flex-shrink:0;margin-top:1px"></i>Initiate collaborations for international grants & global presence</li>
+              </ul>
              </div>
              <div class="flex items-center gap-3 flex-shrink-0">
               <span class="label-small" style="color:#9A9A9A">Mar 2026 – Present</span>
@@ -573,55 +570,56 @@
           <div class="hidden md:flex absolute left-0 top-6 w-10 h-10 rounded-full items-center justify-center z-10" style="background:#4A6B8A;box-shadow:0 0 0 3px #FAFAF8,0 0 0 5px #4A6B8A"><i data-lucide="plane" style="width:16px;height:16px;color:#fff"></i></div>
           <div class="card overflow-hidden">
            <button class="w-full text-left p-6" onclick="toggleAboutTimeline(this)">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-             <div>
-              <h3 class="font-heading font-semibold text-lg" style="color:#1C1C1E">International Mobility &amp; Global Reputation</h3>
-              <p class="text-sm font-medium mt-0.5" style="color:#4A6B8A">Airlangga Global Engagement · Surabaya</p>
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+             <div class="flex-1">
+              <p class="text-sm font-semibold mb-2" style="color:#4A6B8A">Airlangga Global Engagement · Surabaya</p>
+              <div class="mb-3">
+               <h3 class="font-heading font-semibold text-base" style="color:#1C1C1E">International Mobility &amp; Global Reputation</h3>
+               <p class="text-xs mb-1.5" style="color:#9A9A9A">Sep 2025 – Mar 2026</p>
+               <ul class="space-y-1">
+                <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#4A6B8A;flex-shrink:0;margin-top:1px"></i>Managed 5 exchange programs end-to-end with IDR 50–100M budgets</li>
+                <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#4A6B8A;flex-shrink:0;margin-top:1px"></i>Delivered quality experiences for 120+ international students per semester</li>
+               </ul>
+              </div>
+              <div style="border-top:1px solid rgba(28,28,30,0.06);margin-bottom:12px"></div>
+              <div>
+               <h3 class="font-heading font-semibold text-base" style="color:#1C1C1E">International Student &amp; Mobility</h3>
+               <p class="text-xs mb-1.5" style="color:#9A9A9A">Jan 2024 – Sep 2025</p>
+               <ul class="space-y-1">
+                <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#4A6B8A;flex-shrink:0;margin-top:1px"></i>Welfare support for 100+ students — accommodation, healthcare, immigration</li>
+                <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#4A6B8A;flex-shrink:0;margin-top:1px"></i>Coordinated across 10+ stakeholders including hospitals, banks & immigration</li>
+               </ul>
+              </div>
              </div>
              <div class="flex items-center gap-3 flex-shrink-0">
-              <span class="label-small" style="color:#9A9A9A">Sep 2025 – Mar 2026</span>
+              <span class="label-small" style="color:#9A9A9A">Jan 2024 – Mar 2026</span>
               <i data-lucide="chevron-down" class="timeline-chevron" style="width:16px;height:16px;color:#9A9A9A;transition:transform .25s;flex-shrink:0"></i>
              </div>
             </div>
            </button>
            <div class="timeline-body" style="display:none;border-top:1px solid rgba(28,28,30,0.06)">
             <div class="p-6 pt-5">
-             <p class="text-sm leading-relaxed mb-4" style="color:#5C5C5C">Led end-to-end management of 5 international exchange programs with IDR 50–100M budgets per program across 50+ stakeholders.</p>
-             <ul class="space-y-2 mb-5">
-              <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>Managed 5 end-to-end exchange programs — promotion, pre-departure, arrival, study period, post-program</li>
-              <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>Budget management of IDR 50–100M per program across 50+ stakeholders</li>
-              <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>High-quality exchange experiences for 120+ international students per semester</li>
-             </ul>
-             <div class="flex flex-wrap gap-2"><span class="tag">Exchange Programs</span><span class="tag">Budget Management</span><span class="tag">Project Management</span><span class="tag">Leadership</span></div>
-            </div>
-           </div>
-          </div>
-         </div>
-
-         <div class="md:pl-16 relative">
-          <div class="hidden md:flex absolute left-0 top-6 w-10 h-10 rounded-full items-center justify-center z-10" style="background:#4A6B8A;box-shadow:0 0 0 3px #FAFAF8,0 0 0 5px #4A6B8A"><i data-lucide="users" style="width:16px;height:16px;color:#fff"></i></div>
-          <div class="card overflow-hidden">
-           <button class="w-full text-left p-6" onclick="toggleAboutTimeline(this)">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+             <div class="mb-5">
+              <h4 class="font-heading font-semibold text-sm mb-1" style="color:#1C1C1E">International Mobility &amp; Global Reputation</h4>
+              <p class="text-xs mb-3" style="color:#9A9A9A">Sep 2025 – Mar 2026</p>
+              <ul class="space-y-2 mb-3">
+               <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>Managed 5 end-to-end exchange programs — promotion, pre-departure, arrival, study period, post-program</li>
+               <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>Budget management of IDR 50–100M per program across 50+ stakeholders</li>
+               <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>High-quality exchange experiences for 120+ international students per semester</li>
+              </ul>
+              <div class="flex flex-wrap gap-2"><span class="tag">Exchange Programs</span><span class="tag">Budget Management</span><span class="tag">Project Management</span><span class="tag">Leadership</span></div>
+             </div>
+             <div style="border-top:1px solid rgba(28,28,30,0.06);margin-bottom:20px"></div>
              <div>
-              <h3 class="font-heading font-semibold text-lg" style="color:#1C1C1E">International Student &amp; Mobility</h3>
-              <p class="text-sm font-medium mt-0.5" style="color:#4A6B8A">Airlangga Global Engagement · Surabaya</p>
+              <h4 class="font-heading font-semibold text-sm mb-1" style="color:#1C1C1E">International Student &amp; Mobility</h4>
+              <p class="text-xs mb-3" style="color:#9A9A9A">Jan 2024 – Sep 2025</p>
+              <ul class="space-y-2 mb-3">
+               <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>End-to-end welfare support — accommodation, healthcare, insurance, banking, immigration</li>
+               <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>Coordinated across 10+ stakeholders including faculties, hospitals, banks, immigration</li>
+               <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>Managed KNB &amp; TIAS government scholarship processing and student welfare cases</li>
+              </ul>
+              <div class="flex flex-wrap gap-2"><span class="tag">Student Support</span><span class="tag">Welfare Coordination</span><span class="tag">Immigration</span><span class="tag">Stakeholder Management</span></div>
              </div>
-             <div class="flex items-center gap-3 flex-shrink-0">
-              <span class="label-small" style="color:#9A9A9A">Jan 2024 – Sep 2025</span>
-              <i data-lucide="chevron-down" class="timeline-chevron" style="width:16px;height:16px;color:#9A9A9A;transition:transform .25s;flex-shrink:0"></i>
-             </div>
-            </div>
-           </button>
-           <div class="timeline-body" style="display:none;border-top:1px solid rgba(28,28,30,0.06)">
-            <div class="p-6 pt-5">
-             <p class="text-sm leading-relaxed mb-4" style="color:#5C5C5C">Comprehensive welfare and non-academic support for 100+ international students per semester, coordinating across 10+ stakeholder types.</p>
-             <ul class="space-y-2 mb-5">
-              <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>End-to-end welfare support — accommodation, healthcare, insurance, banking, immigration</li>
-              <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>Coordinated across 10+ stakeholders including faculties, hospitals, banks, immigration</li>
-              <li class="flex gap-2 text-sm" style="color:#5C5C5C"><i data-lucide="check" style="width:14px;height:14px;color:#4A6B8A;flex-shrink:0;margin-top:2px"></i>Managed KNB &amp; TIAS government scholarship processing and student welfare cases</li>
-             </ul>
-             <div class="flex flex-wrap gap-2"><span class="tag">Student Support</span><span class="tag">Welfare Coordination</span><span class="tag">Immigration</span><span class="tag">Stakeholder Management</span></div>
             </div>
            </div>
           </div>
@@ -635,6 +633,10 @@
              <div>
               <h3 class="font-heading font-semibold text-lg" style="color:#1C1C1E">Assistant Lecturer — Foreign Policy Analysis</h3>
               <p class="text-sm font-medium mt-0.5" style="color:#8B7355">Universitas Airlangga</p>
+              <ul class="mt-2 space-y-1">
+               <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#8B7355;flex-shrink:0;margin-top:1px"></i>Co-facilitated Foreign Policy Analysis for undergraduate IR students</li>
+               <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#8B7355;flex-shrink:0;margin-top:1px"></i>Moderated debates & managed grading, scheduling, and coordination</li>
+              </ul>
              </div>
              <div class="flex items-center gap-3 flex-shrink-0">
               <span class="label-small" style="color:#9A9A9A">Sep 2023 – Jan 2024</span>
@@ -663,6 +665,10 @@
              <div>
               <h3 class="font-heading font-semibold text-lg" style="color:#1C1C1E">Intl. Program &amp; Inbound Coordinator</h3>
               <p class="text-sm font-medium mt-0.5" style="color:#8B7355">Koordinasi Informasi dan Kehumasan FISIP Unair</p>
+              <ul class="mt-2 space-y-1">
+               <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#8B7355;flex-shrink:0;margin-top:1px"></i>Coordinated logistics for foreign lecturers and visiting students</li>
+               <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#8B7355;flex-shrink:0;margin-top:1px"></i>English–Indonesian interpretation at conferences and guest lectures</li>
+              </ul>
              </div>
              <div class="flex items-center gap-3 flex-shrink-0">
               <span class="label-small" style="color:#9A9A9A">Jun 2023 – Jan 2024</span>
@@ -691,6 +697,10 @@
              <div>
               <h3 class="font-heading font-semibold text-lg" style="color:#1C1C1E">Research Assistant</h3>
               <p class="text-sm font-medium mt-0.5" style="color:#5C5C5C">Universitas Airlangga</p>
+              <ul class="mt-2 space-y-1">
+               <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#5C5C5C;flex-shrink:0;margin-top:1px"></i>Researched U.S.–ASEAN economic cooperation across Biden &amp; Trump administrations</li>
+               <li class="flex gap-1.5 text-xs" style="color:#5C5C5C"><i data-lucide="check" style="width:11px;height:11px;color:#5C5C5C;flex-shrink:0;margin-top:1px"></i>Contributed to paper presented at the 9th ICoCSPA 2023</li>
+              </ul>
              </div>
              <div class="flex items-center gap-3 flex-shrink-0">
               <span class="label-small" style="color:#9A9A9A">May 2023 – Jan 2024</span>
@@ -1324,78 +1334,143 @@
      </div>
     </div><!-- PROJECT MANAGEMENT OVERVIEW PAGE -->
     <div id="page-projects-overview" class="page py-20" style="background:#FAFAF8">
-     <div class="max-w-6xl mx-auto px-6">
-      <button onclick="goToPage('home')" class="flex items-center gap-2 mb-8" style="color:#9A9A9A"><i data-lucide="arrow-left" style="width:16px;height:16px"></i> Back</button>
-      <div class="mb-16">
-       <div class="flex items-center gap-3 mb-4"><span class="accent-line"></span> <span class="text-sm font-semibold" style="color:#8B7355">Featured Programs</span>
+     <div class="max-w-6xl mx-auto px-6 py-16">
+
+      <!-- Stats strip -->
+      <div class="flex flex-wrap gap-10 mb-16 pb-12" style="border-bottom:1px solid rgba(28,28,30,0.08)">
+       <div>
+        <div class="font-heading font-bold text-4xl" style="color:#1C1C1E">3</div>
+        <div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Flagship Programs</div>
        </div>
-       <h1 class="font-heading font-bold text-4xl mb-4" style="color:#1C1C1E">Project Management &amp; Event Planning</h1>
-       <p class="text-lg max-w-3xl" style="color:#5C5C5C">Three flagship programs from Airlangga Global Engagement that I managed end-to-end — from budget planning and logistics to delivering seamless international student experiences.</p>
+       <div>
+        <div class="font-heading font-bold text-4xl" style="color:#1C1C1E">IDR 150–290M</div>
+        <div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Budget Managed</div>
+       </div>
+       <div>
+        <div class="font-heading font-bold text-4xl" style="color:#1C1C1E">200+</div>
+        <div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Students Supported</div>
+       </div>
+       <div>
+        <div class="font-heading font-bold text-4xl" style="color:#1C1C1E">50+</div>
+        <div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Stakeholders Engaged</div>
+       </div>
       </div>
-      <div class="grid md:grid-cols-3 gap-8"><!-- AMERTA Card -->
-       <div class="card rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer" onclick="goToPage('amerta')" style="border:1px solid rgba(28,28,30,0.08);background:#FFFFFF">
-        <div class="w-full h-48 flex items-center justify-center relative overflow-hidden" style="background:linear-gradient(135deg,#1E3A5F,#4A6B8A)">
-         <div class="absolute inset-0" style="background:radial-gradient(circle at 30% 50%,rgba(255,255,255,0.2),transparent)"></div>
-         <div class="relative z-10 flex items-center justify-center h-full"><i data-lucide="plane" style="width:64px;height:64px;color:#fff;opacity:0.8"></i>
+
+      <!-- Section label -->
+      <div class="flex items-center gap-3 mb-3"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#8B7355">Featured Programs</span></div>
+      <h2 class="font-heading font-bold text-3xl mb-12" style="color:#1C1C1E">Programs I've Managed End-to-End</h2>
+
+      <!-- AMERTA — large featured horizontal card -->
+      <div class="card rounded-2xl overflow-hidden mb-6 cursor-pointer group" onclick="goToPage('amerta')" style="border:1px solid rgba(28,28,30,0.08)">
+       <div class="grid md:grid-cols-5" style="min-height:220px">
+        <div class="md:col-span-2 relative flex items-center justify-center overflow-hidden" style="background:linear-gradient(135deg,#1E3A5F,#4A6B8A);min-height:180px">
+         <div class="absolute inset-0" style="background:radial-gradient(circle at 30% 50%,rgba(255,255,255,0.12),transparent)"></div>
+         <div class="absolute inset-0 flex items-center justify-center" style="overflow:hidden">
+          <span class="font-heading font-bold select-none" style="font-size:clamp(3rem,8vw,6rem);color:rgba(255,255,255,0.07);letter-spacing:-.03em;white-space:nowrap">AMERTA</span>
+         </div>
+         <div class="relative z-10 text-center px-6">
+          <div class="font-heading font-bold text-4xl mb-1" style="color:#fff;letter-spacing:-.02em">AMERTA</div>
+          <div class="text-xs uppercase tracking-widest mt-2" style="color:rgba(255,255,255,0.6)">Semester Exchange · Since 2024</div>
+         </div>
+        </div>
+        <div class="md:col-span-3 p-8 flex flex-col justify-between">
+         <div>
+          <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block mb-4" style="background:rgba(74,107,138,0.1);color:#4A6B8A">Student Mobility</span>
+          <h3 class="font-heading font-bold text-2xl mb-3" style="color:#1C1C1E">Airlangga Mobility, Exchange, Research &amp; Transfer Academic</h3>
+          <p class="text-sm leading-relaxed mb-5" style="color:#5C5C5C">Universitas Airlangga's flagship semester exchange — I managed end-to-end coordination: promotion, pre-departure preparation, arrival logistics, and post-program completion for 120+ inbound students per cohort with a budget of IDR 50–100M.</p>
+          <div class="flex flex-wrap gap-1.5"><span class="tag">Student Mobility</span><span class="tag">Project Management</span><span class="tag">Leadership</span></div>
+         </div>
+         <div class="flex flex-wrap items-end gap-6 pt-5 mt-5" style="border-top:1px solid rgba(28,28,30,0.07)">
+          <div><div class="font-heading font-bold text-xl" style="color:#1C1C1E">120+</div><div class="text-xs" style="color:#9A9A9A">Students / cohort</div></div>
+          <div><div class="font-heading font-bold text-xl" style="color:#1C1C1E">IDR 50–100M</div><div class="text-xs" style="color:#9A9A9A">Budget / program</div></div>
+          <div><div class="font-heading font-bold text-xl" style="color:#1C1C1E">10+</div><div class="text-xs" style="color:#9A9A9A">Stakeholders</div></div>
+          <div class="ml-auto">
+           <span class="flex items-center gap-2 font-medium text-sm transition-all" style="color:#8B7355">View Details <i data-lucide="arrow-right" style="width:16px;height:16px"></i></span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+
+      <!-- ACI + AERO — side by side -->
+      <div class="grid md:grid-cols-2 gap-6 mb-20">
+
+       <!-- ACI -->
+       <div class="card rounded-2xl overflow-hidden cursor-pointer group" onclick="goToPage('aci')" style="border:1px solid rgba(28,28,30,0.08)">
+        <div class="relative flex items-end overflow-hidden px-6 pb-5" style="background:linear-gradient(135deg,#4A5235,#6B7455);height:140px">
+         <div class="absolute inset-0" style="background:radial-gradient(circle at 70% 30%,rgba(255,255,255,0.1),transparent)"></div>
+         <div class="absolute top-3 right-4 font-heading font-bold select-none" style="font-size:5rem;color:rgba(255,255,255,0.07);letter-spacing:-.03em;line-height:1">ACI</div>
+         <div class="relative z-10">
+          <div class="font-heading font-bold text-3xl" style="color:#fff">ACI</div>
+          <div class="text-xs uppercase tracking-widest" style="color:rgba(255,255,255,0.6)">Cultural Immersion</div>
          </div>
         </div>
         <div class="p-6">
-         <h3 class="font-heading font-bold text-xl mb-2" style="color:#1C1C1E">AMERTA</h3>
-         <p class="text-sm font-medium mb-3" style="color:#4A6B8A">Semester Exchange Program</p>
-         <p class="text-sm mb-4" style="color:#5C5C5C">End-to-end semester exchange program at Universitas Airlangga — coordinating promotion, pre-departure preparation, arrival logistics, and post-program completion for inbound students.</p>
-         <div class="flex flex-wrap gap-1.5 mb-4"><span class="tag">Student Mobility</span><span class="tag">Project Management</span><span class="tag">Leadership</span></div>
-         <button class="flex items-center gap-2 font-medium text-sm" style="color:#8B7355"> <span>View Details</span><i data-lucide="arrow-right" style="width:16px;height:16px"></i> </button>
+         <p class="text-sm leading-relaxed mb-4" style="color:#5C5C5C">Bringing together international and local students through collaborative activities, site visits, and structured engagement throughout the semester.</p>
+         <div class="flex flex-wrap gap-1.5 mb-4"><span class="tag">Student Support</span><span class="tag">Cross-Cultural</span><span class="tag">Project Management</span></div>
+         <div class="flex items-center justify-between pt-4" style="border-top:1px solid rgba(28,28,30,0.07)">
+          <div><div class="font-heading font-bold text-lg" style="color:#1C1C1E">100+ Students</div><div class="text-xs" style="color:#9A9A9A">Per program</div></div>
+          <span class="flex items-center gap-2 text-sm font-medium" style="color:#8B7355">View <i data-lucide="arrow-right" style="width:14px;height:14px"></i></span>
+         </div>
         </div>
-       </div><!-- ACI Card -->
-       <div class="card rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer" onclick="goToPage('aci')" style="border:1px solid rgba(28,28,30,0.08);background:#FFFFFF">
-        <div class="w-full h-48 flex items-center justify-center relative overflow-hidden" style="background:linear-gradient(135deg,#4A5235,#6B7455)">
-         <div class="absolute inset-0" style="background:radial-gradient(circle at 70% 30%,rgba(255,255,255,0.2),transparent)"></div>
-         <div class="relative z-10 flex items-center justify-center h-full"><i data-lucide="users" style="width:64px;height:64px;color:#fff;opacity:0.8"></i>
+       </div>
+
+       <!-- AERO -->
+       <div class="card rounded-2xl overflow-hidden cursor-pointer group" onclick="goToPage('aero')" style="border:1px solid rgba(28,28,30,0.08)">
+        <div class="relative flex items-end overflow-hidden px-6 pb-5" style="background:linear-gradient(135deg,#1C1C1E,#2C2C2E);height:140px">
+         <div class="absolute inset-0" style="background:radial-gradient(circle at 60% 30%,rgba(255,255,255,0.06),transparent)"></div>
+         <div class="absolute top-3 right-3 font-heading font-bold select-none" style="font-size:4.5rem;color:rgba(255,255,255,0.05);letter-spacing:-.03em;line-height:1">AERO</div>
+         <div class="relative z-10">
+          <div class="font-heading font-bold text-3xl" style="color:#fff">AERO</div>
+          <div class="text-xs uppercase tracking-widest" style="color:rgba(255,255,255,0.5)">Annual Exhibition</div>
          </div>
         </div>
         <div class="p-6">
-         <h3 class="font-heading font-bold text-xl mb-2" style="color:#1C1C1E">ACI</h3>
-         <p class="text-sm font-medium mb-3" style="color:#4A5235">Airlangga Cultural Immersion</p>
-         <p class="text-sm mb-4" style="color:#5C5C5C">Cultural immersion program bringing together international and local students through collaborative activities, site visits, and structured engagement events throughout the semester.</p>
-         <div class="flex flex-wrap gap-1.5 mb-4"><span class="tag">Student Support</span><span class="tag">Cross-Cultural Communication</span><span class="tag">Project Management</span></div>
-         <button class="flex items-center gap-2 font-medium text-sm" style="color:#8B7355"> <span>View Details</span><i data-lucide="arrow-right" style="width:16px;height:16px"></i> </button>
-        </div>
-       </div><!-- AERO Card -->
-       <div class="card rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer" onclick="goToPage('aero')" style="border:1px solid rgba(28,28,30,0.08);background:#FFFFFF">
-        <div class="w-full h-48 flex items-center justify-center relative overflow-hidden" style="background:linear-gradient(135deg,#1C1C1E,#2C2C2E)">
-         <div class="absolute inset-0" style="background:radial-gradient(circle at 50% 50%,rgba(255,255,255,0.2),transparent)"></div>
-         <div class="relative z-10 flex items-center justify-center h-full"><i data-lucide="sparkles" style="width:64px;height:64px;color:#fff;opacity:0.8"></i>
-         </div>
-        </div>
-        <div class="p-6">
-         <h3 class="font-heading font-bold text-xl mb-2" style="color:#1C1C1E">AERO</h3>
-         <p class="text-sm font-medium mb-3" style="color:#6B4F32">Airlangga Expanding &amp; Reach Opportunities Exhibition</p>
-         <p class="text-sm mb-4" style="color:#5C5C5C">Annual exhibition at Universitas Airlangga showcasing global partnerships and international programs — coordinated logistics, vendor management, and event planning across 50+ stakeholders.</p>
+         <p class="text-sm leading-relaxed mb-4" style="color:#5C5C5C">Annual exhibition at Universitas Airlangga showcasing global partnerships — coordinated logistics, vendor management, and event planning across 50+ stakeholders.</p>
          <div class="flex flex-wrap gap-1.5 mb-4"><span class="tag">International Partnership</span><span class="tag">Branding</span><span class="tag">Creative Direction</span></div>
-         <button class="flex items-center gap-2 font-medium text-sm" style="color:#8B7355"> <span>View Details</span><i data-lucide="arrow-right" style="width:16px;height:16px"></i> </button>
+         <div class="flex items-center justify-between pt-4" style="border-top:1px solid rgba(28,28,30,0.07)">
+          <div><div class="font-heading font-bold text-lg" style="color:#1C1C1E">50+ Stakeholders</div><div class="text-xs" style="color:#9A9A9A">Coordinated</div></div>
+          <span class="flex items-center gap-2 text-sm font-medium" style="color:#8B7355">View <i data-lucide="arrow-right" style="width:14px;height:14px"></i></span>
+         </div>
         </div>
        </div>
       </div>
-      <div class="mt-20">
-       <div class="flex items-center gap-3 mb-4"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#003087">Digital Projects</span></div>
+
+      <!-- Digital Projects section -->
+      <div style="border-top:1px solid rgba(28,28,30,0.08)" class="pt-16">
+       <div class="flex items-center gap-3 mb-3"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#003087">Digital Projects</span></div>
        <h2 class="font-heading font-bold text-3xl mb-3" style="color:#1C1C1E">Digital Transformation</h2>
        <p class="text-base mb-10 max-w-2xl" style="color:#5C5C5C">Rebuilding institutional web presence for higher education — from research and diagnosis through to full-stack delivery.</p>
-       <div class="grid md:grid-cols-2 gap-8">
-        <div class="card rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer" onclick="goToPage('pcu-global')" style="border:1px solid rgba(28,28,30,0.08);background:#FFFFFF">
-         <div class="w-full h-48 flex items-center justify-center relative overflow-hidden" style="background:linear-gradient(135deg,#003087,#1a56a0)">
-          <div class="absolute inset-0" style="background:radial-gradient(circle at 30% 50%,rgba(255,255,255,0.2),transparent)"></div>
-          <div class="relative z-10 flex items-center justify-center h-full"><i data-lucide="globe" style="width:64px;height:64px;color:#fff;opacity:0.8"></i></div>
+
+       <!-- PCU Global — full-width horizontal card -->
+       <div class="card rounded-2xl overflow-hidden cursor-pointer group" onclick="goToPage('pcu-global')" style="border:1px solid rgba(28,28,30,0.08)">
+        <div class="grid md:grid-cols-5" style="min-height:200px">
+         <div class="md:col-span-2 relative flex items-center justify-center overflow-hidden" style="background:linear-gradient(135deg,#003087,#1a56a0);min-height:160px">
+          <div class="absolute inset-0" style="background:radial-gradient(circle at 30% 50%,rgba(255,255,255,0.15),transparent)"></div>
+          <div class="absolute inset-0 flex items-center justify-center" style="overflow:hidden">
+           <span class="font-heading font-bold select-none" style="font-size:clamp(3rem,7vw,5.5rem);color:rgba(255,255,255,0.07);letter-spacing:-.03em;white-space:nowrap">PCU Global</span>
+          </div>
+          <div class="relative z-10 text-center px-6">
+           <div class="font-heading font-bold text-4xl mb-0.5" style="color:#fff;letter-spacing:-.02em">PCU Global</div>
+           <div class="text-xs uppercase tracking-widest mt-2" style="color:rgba(255,255,255,0.55)">International Office</div>
+          </div>
          </div>
-         <div class="p-6">
-          <h3 class="font-heading font-bold text-xl mb-2" style="color:#1C1C1E">PCU Global</h3>
-          <p class="text-sm font-medium mb-3" style="color:#003087">International Office · Petra Christian University</p>
-          <p class="text-sm mb-4" style="color:#5C5C5C">Rebuilding and rebranding PCU's International Office through a purpose-built web presence — designed for inbound students, outbound programs, and institutional partners.</p>
-          <div class="flex flex-wrap gap-1.5 mb-4"><span class="tag">Web Development</span><span class="tag">UI/UX Design</span><span class="tag">Digital Strategy</span></div>
-          <button class="flex items-center gap-2 font-medium text-sm" style="color:#003087"> <span>View Details</span><i data-lucide="arrow-right" style="width:16px;height:16px"></i> </button>
+         <div class="md:col-span-3 p-8 flex flex-col justify-between">
+          <div>
+           <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block mb-4" style="background:rgba(0,48,135,0.08);color:#003087">Web Application</span>
+           <h3 class="font-heading font-bold text-2xl mb-3" style="color:#1C1C1E">PCU Global — International Office Website</h3>
+           <p class="text-sm leading-relaxed mb-5" style="color:#5C5C5C">Rebuilding and rebranding PCU's International Office through a purpose-built web presence — designed for inbound students, outbound programs, and institutional partners. Full-stack delivery including news CMS, partnership directory, and mobile-first design.</p>
+           <div class="flex flex-wrap gap-1.5"><span class="tag">Full-Stack Development</span><span class="tag">UI/UX Design</span><span class="tag">Digital Strategy</span><span class="tag">Branding</span></div>
+          </div>
+          <div class="flex items-center justify-between pt-5 mt-5" style="border-top:1px solid rgba(28,28,30,0.07)">
+           <div class="text-xs uppercase tracking-wider" style="color:#9A9A9A">Petra Christian University · 2026</div>
+           <span class="flex items-center gap-2 text-sm font-medium" style="color:#003087">View Details <i data-lucide="arrow-right" style="width:16px;height:16px"></i></span>
+          </div>
          </div>
         </div>
        </div>
       </div>
+
      </div>
     </div><!-- PROJECT PAGES -->
     <div id="page-amerta" class="page py-20"></div>
@@ -1524,7 +1599,7 @@
      <div class="max-w-6xl mx-auto px-6">
       <button onclick="goToPage('engagement')" class="flex items-center gap-2 mb-6" style="color:#1E3A5F"><i data-lucide="arrow-left" style="width:16px;height:16px"></i> Back</button>
       <h1 class="font-heading font-bold text-4xl mb-2" style="color:#1C1C1E">Student Engagement Initiatives</h1>
-      <p class="text-lg mb-12" style="color:#5C5C5C">Building meaningful connections and fostering personal growth</p>
+      <p class="text-lg mgit co-12" style="color:#5C5C5C">Building meaningful connections and fostering personal growth</p>
       <div class="card p-8 mb-8">
        <h2 class="font-heading font-semibold text-2xl mb-4" style="color:#1C1C1E">Engagement Programs</h2>
        <p class="text-base mb-8" style="color:#5C5C5C">We create dynamic engagement opportunities that help international students thrive academically and personally while building lasting friendships and professional networks.</p>
@@ -1932,158 +2007,7 @@
       </div>
      </div>
     </div>
-    <div id="page-designs" class="page py-20" style="background:#1a1a2e">
-     <div class="max-w-6xl mx-auto px-6">
-      <button onclick="goToPage('home')" class="flex items-center gap-2 mb-8 text-white hover:text-purple-300 transition"><i data-lucide="arrow-left" style="width:16px;height:16px"></i> Back</button>
-      <div class="mb-16">
-       <div class="flex items-center gap-3 mb-4"><span class="accent-line"></span> <span class="text-sm font-semibold text-purple-400">Visual Portfolio</span>
-       </div>
-       <h1 class="font-heading font-bold text-4xl mb-4 text-white">Graphic Design &amp; Branding</h1>
-       <p class="text-lg max-w-3xl text-slate-300">Strategic visual design that communicates institutional identity and international partnerships. From event materials to marketing collateral, thoughtful design amplifies our message and builds global recognition across borders.</p>
-      </div><!-- Design Gallery Grid -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-       <!-- Design 1: AERO Exhibition Poster -->
-       <div class="group relative overflow-hidden rounded-lg cursor-pointer aspect-square">
-        <div class="absolute inset-0 bg-gradient-to-br" style="background:linear-gradient(135deg,#a855f7,#ec4899)"></div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-         <i data-lucide="sparkles" style="width:48px;height:48px;color:#fff;margin-bottom:16px"></i>
-         <h3 class="font-heading font-bold text-lg text-white mb-1">AERO Exhibition</h3>
-         <p class="text-xs text-white/80">Annual Showcase Poster</p>
-        </div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:rgba(0,0,0,0.85)">
-         <p class="text-sm text-white mb-3">Exhibition poster design featuring bold typography and institutional colors celebrating global partnerships</p>
-         <div class="flex gap-2">
-          <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Illustrator</span> <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Print</span>
-         </div>
-        </div>
-       </div><!-- Design 2: International Programs Brochure -->
-       <div class="group relative overflow-hidden rounded-lg cursor-pointer aspect-square">
-        <div class="absolute inset-0 bg-gradient-to-br" style="background:linear-gradient(135deg,#06b6d4,#0891b2)"></div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-         <i data-lucide="book-open" style="width:48px;height:48px;color:#fff;margin-bottom:16px"></i>
-         <h3 class="font-heading font-bold text-lg text-white mb-1">Programs Brochure</h3>
-         <p class="text-xs text-white/80">Multi-page Layout</p>
-        </div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:rgba(0,0,0,0.85)">
-         <p class="text-sm text-white mb-3">Comprehensive brochure showcasing international exchange programs with photography and detailed program information</p>
-         <div class="flex gap-2">
-          <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">InDesign</span> <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Layout</span>
-         </div>
-        </div>
-       </div><!-- Design 3: Event Marketing Campaign -->
-       <div class="group relative overflow-hidden rounded-lg cursor-pointer aspect-square">
-        <div class="absolute inset-0 bg-gradient-to-br" style="background:linear-gradient(135deg,#f97316,#fb923c)"></div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-         <i data-lucide="megaphone" style="width:48px;height:48px;color:#fff;margin-bottom:16px"></i>
-         <h3 class="font-heading font-bold text-lg text-white mb-1">Marketing Campaign</h3>
-         <p class="text-xs text-white/80">Social Media Set</p>
-        </div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:rgba(0,0,0,0.85)">
-         <p class="text-sm text-white mb-3">Cohesive social media graphics and promotional templates for international student recruitment campaigns</p>
-         <div class="flex gap-2">
-          <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Figma</span> <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Digital</span>
-         </div>
-        </div>
-       </div><!-- Design 4: Annual Report Cover -->
-       <div class="group relative overflow-hidden rounded-lg cursor-pointer aspect-square">
-        <div class="absolute inset-0 bg-gradient-to-br" style="background:linear-gradient(135deg,#10b981,#059669)"></div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-         <i data-lucide="file-text" style="width:48px;height:48px;color:#fff;margin-bottom:16px"></i>
-         <h3 class="font-heading font-bold text-lg text-white mb-1">Annual Report</h3>
-         <p class="text-xs text-white/80">Cover Design</p>
-        </div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:rgba(0,0,0,0.85)">
-         <p class="text-sm text-white mb-3">Professional annual report cover featuring institutional achievements, statistics, and global partnership highlights</p>
-         <div class="flex gap-2">
-          <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Photoshop</span> <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Print</span>
-         </div>
-        </div>
-       </div><!-- Design 5: Presentation Deck -->
-       <div class="group relative overflow-hidden rounded-lg cursor-pointer aspect-square">
-        <div class="absolute inset-0 bg-gradient-to-br" style="background:linear-gradient(135deg,#3b82f6,#2563eb)"></div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-         <i data-lucide="presentation" style="width:48px;height:48px;color:#fff;margin-bottom:16px"></i>
-         <h3 class="font-heading font-bold text-lg text-white mb-1">Presentation Deck</h3>
-         <p class="text-xs text-white/80">Keynote Template</p>
-        </div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:rgba(0,0,0,0.85)">
-         <p class="text-sm text-white mb-3">Modern presentation templates for conferences featuring consistent branding and data visualization layouts</p>
-         <div class="flex gap-2">
-          <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Keynote</span> <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Template</span>
-         </div>
-        </div>
-       </div><!-- Design 6: Logo System -->
-       <div class="group relative overflow-hidden rounded-lg cursor-pointer aspect-square">
-        <div class="absolute inset-0 bg-gradient-to-br" style="background:linear-gradient(135deg,#ec4899,#db2777)"></div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-         <i data-lucide="circle" style="width:48px;height:48px;color:#fff;margin-bottom:16px"></i>
-         <h3 class="font-heading font-bold text-lg text-white mb-1">Logo Systems</h3>
-         <p class="text-xs text-white/80">Brand Identity</p>
-        </div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:rgba(0,0,0,0.85)">
-         <p class="text-sm text-white mb-3">Comprehensive logo design systems with variations for programs and initiatives including guidelines documentation</p>
-         <div class="flex gap-2">
-          <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Illustrator</span> <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Brand</span>
-         </div>
-        </div>
-       </div><!-- Design 7: Website UI Kit -->
-       <div class="group relative overflow-hidden rounded-lg cursor-pointer aspect-square">
-        <div class="absolute inset-0 bg-gradient-to-br" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)"></div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-         <i data-lucide="layout-grid" style="width:48px;height:48px;color:#fff;margin-bottom:16px"></i>
-         <h3 class="font-heading font-bold text-lg text-white mb-1">UI Design Kit</h3>
-         <p class="text-xs text-white/80">Component Library</p>
-        </div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:rgba(0,0,0,0.85)">
-         <p class="text-sm text-white mb-3">Comprehensive UI component library with buttons, cards, forms, and navigation patterns for consistency</p>
-         <div class="flex gap-2">
-          <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Figma</span> <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">System</span>
-         </div>
-        </div>
-       </div><!-- Design 8: Event Collateral -->
-       <div class="group relative overflow-hidden rounded-lg cursor-pointer aspect-square">
-        <div class="absolute inset-0 bg-gradient-to-br" style="background:linear-gradient(135deg,#64748b,#475569)"></div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-         <i data-lucide="ticket" style="width:48px;height:48px;color:#fff;margin-bottom:16px"></i>
-         <h3 class="font-heading font-bold text-lg text-white mb-1">Event Collateral</h3>
-         <p class="text-xs text-white/80">Tickets &amp; Materials</p>
-        </div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:rgba(0,0,0,0.85)">
-         <p class="text-sm text-white mb-3">Complete event design package including tickets, banners, badges, and signage for exhibitions and conferences</p>
-         <div class="flex gap-2">
-          <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Adobe CC</span> <span class="text-xs px-2 py-1 rounded" style="background:rgba(255,255,255,0.2);color:#fff">Print</span>
-         </div>
-        </div>
-       </div>
-      </div><!-- Design Process Section -->
-      <div class="p-8 rounded-xl border" style="border-color:#334155;background:rgba(30,55,75,0.5)">
-       <h3 class="font-heading font-bold text-lg text-white mb-6">Design Approach</h3>
-       <div class="grid md:grid-cols-3 gap-6">
-        <div>
-         <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(168,85,247,0.2);color:#d8b4fe">
-          <i data-lucide="lightbulb" style="width:20px;height:20px"></i>
-         </div>
-         <p class="text-sm font-semibold text-white mb-2">Strategy First</p>
-         <p class="text-xs text-slate-400">Understanding brand goals and audience before creating visuals</p>
-        </div>
-        <div>
-         <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(168,85,247,0.2);color:#d8b4fe">
-          <i data-lucide="palette" style="width:20px;height:20px"></i>
-         </div>
-         <p class="text-sm font-semibold text-white mb-2">Visual Consistency</p>
-         <p class="text-xs text-slate-400">Cohesive color, typography, and design systems across materials</p>
-        </div>
-        <div>
-         <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(168,85,247,0.2);color:#d8b4fe">
-          <i data-lucide="zap" style="width:20px;height:20px"></i>
-         </div>
-         <p class="text-sm font-semibold text-white mb-2">Impact &amp; Innovation</p>
-         <p class="text-xs text-slate-400">Bold, memorable designs that stand out and tell stories</p>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div><!-- CONTACT PAGE -->
+    <div id="page-designs" class="page"></div><!-- CONTACT PAGE -->
     <div id="page-contact" class="page py-20" style="background:linear-gradient(135deg,#FFF5F0,#FFF9F5)">
      <div class="max-w-2xl mx-auto px-6"><button onclick="goToPage('home')" class="flex items-center gap-2 mb-12" style="color:#C85A3A"><i data-lucide="arrow-left" style="width:16px;height:16px"></i> Back</button> <!-- Welcome Section -->
       <div class="text-center mb-12">

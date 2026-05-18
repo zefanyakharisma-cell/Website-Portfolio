@@ -5,8 +5,8 @@
 const AERO_BUDGET = {
   categories: [
     {
-      name: 'Event & EO', icon: 'package', color: '#a855f7',
-      bg: 'linear-gradient(135deg,#faf5ff,#f3e8ff)', border: 'rgba(168,85,247,0.2)',
+      name: 'Event & EO', icon: 'package', color: '#1C1C1E',
+      bg: 'linear-gradient(135deg,#F4F4F4,#EBEBEB)', border: 'rgba(28,28,30,0.15)',
       total: 92812500,
       items: [
         { name: 'Outdoor Standard Stage 4×6m', qty: '1', total: 3000000 },
@@ -40,16 +40,16 @@ const AERO_BUDGET = {
       ]
     },
     {
-      name: 'Accommodation', icon: 'building', color: '#0ea5e9',
-      bg: 'linear-gradient(135deg,#f0f9ff,#e0f2fe)', border: 'rgba(14,165,233,0.2)',
+      name: 'Accommodation', icon: 'building', color: '#4A6B8A',
+      bg: 'linear-gradient(135deg,#EEF2F7,#D8E5EF)', border: 'rgba(74,107,138,0.2)',
       total: 20000000,
       items: [
         { name: 'Room with Breakfast — Zoom Hotel Dharmahusada', qty: '20 rooms × 2 nights', total: 20000000 },
       ]
     },
     {
-      name: 'Meals & Catering', icon: 'utensils', color: '#f97316',
-      bg: 'linear-gradient(135deg,#fff7ed,#ffedd5)', border: 'rgba(249,115,22,0.2)',
+      name: 'Meals & Catering', icon: 'utensils', color: '#8B7355',
+      bg: 'linear-gradient(135deg,#F5F1EC,#EDE5D8)', border: 'rgba(139,115,85,0.2)',
       total: 17250000,
       items: [
         { name: 'Lunch — May 9', qty: '100 persons', total: 3500000 },
@@ -62,8 +62,8 @@ const AERO_BUDGET = {
       ]
     },
     {
-      name: 'Honorarium', icon: 'users', color: '#10b981',
-      bg: 'linear-gradient(135deg,#f0fdf4,#dcfce7)', border: 'rgba(16,185,129,0.2)',
+      name: 'Honorarium', icon: 'users', color: '#4A5235',
+      bg: 'linear-gradient(135deg,#F1F3EE,#E4E8DC)', border: 'rgba(74,82,53,0.2)',
       total: 19600000,
       items: [
         { name: 'Driver & Assistant (3 days)', qty: '2 persons', total: 900000 },
@@ -128,19 +128,19 @@ const AERO_PARTICIPANTS = {
 
 const AERO_RUNDOWN = [
   {
-    day: 'Pre-Arrival', date: 'Friday, 2 May 2025', label: 'Online Meeting', color: '#94a3b8',
+    day: 'Pre-Arrival', date: 'Friday, 2 May 2025', label: 'Online Meeting', color: '#9A9A9A',
     items: [
       { time: '15:00 – 16:00', activity: 'Technical Meeting', venue: 'Online (Zoom)' },
     ]
   },
   {
-    day: 'Day 0', date: 'Thursday, 8 May 2025', label: 'Arrival Day', color: '#0ea5e9',
+    day: 'Day 0', date: 'Thursday, 8 May 2025', label: 'Arrival Day', color: '#4A6B8A',
     items: [
       { time: 'TBC', activity: 'Participant Arrival & Hotel Check-in', venue: 'Zoom Hotel Dharmahusada, Jl. Dharmahusada No.188, Surabaya' },
     ]
   },
   {
-    day: 'Day 1', date: 'Friday, 9 May 2025', label: 'AERO Exhibition', color: '#a855f7',
+    day: 'Day 1', date: 'Friday, 9 May 2025', label: 'AERO Exhibition', color: '#1C1C1E',
     items: [
       { time: '07:00', activity: 'Transfer to Venue', venue: 'Meet at Hotel Lobby' },
       { time: '07:00 – 08:00', activity: 'Exhibitor Registration & Badge Collection', venue: 'Boulevard Area, UNAIR Library Campus B' },
@@ -161,7 +161,7 @@ const AERO_RUNDOWN = [
     ]
   },
   {
-    day: 'Day 1', date: 'Friday, 9 May 2025', label: 'Networking Dinner', color: '#ec4899',
+    day: 'Day 1', date: 'Friday, 9 May 2025', label: 'Networking Dinner', color: '#8B7355',
     items: [
       { time: '18:00 – 18:05', activity: 'Opening — Networking Dinner', venue: 'Ruang Sriwijaya, Lt. 5, ASEEC Tower, Campus B' },
       { time: '18:05 – 18:15', activity: 'Welcoming Speech — Director of Airlangga Global Engagement', venue: '', note: 'Prof. Iman Harymawan, Ph.D' },
@@ -174,7 +174,7 @@ const AERO_RUNDOWN = [
     ]
   },
   {
-    day: 'Day 2', date: 'Saturday, 10 May 2025', label: 'Surabaya City Tour', color: '#14b8a6',
+    day: 'Day 2', date: 'Saturday, 10 May 2025', label: 'Surabaya City Tour', color: '#4A5235',
     items: [
       { time: '06:00 – 07:30', activity: 'Breakfast', venue: 'Hotel' },
       { time: '07:30 – 08:00', activity: 'Preparation for City Tour', venue: 'Meet at Hotel Lobby' },
@@ -196,144 +196,128 @@ function aeroEsc(s) {
 }
 
 function fmtRp(n) {
-  return 'Rp ' + Number(n).toLocaleString('id-ID');
+  return 'Rp ' + Number(n).toLocaleString('id-ID');
 }
 
 // ── Section Builders ─────────────────────────────────────────────────────────
 
 function buildAeroWhatToExpect() {
   const features = [
-    { icon: 'building-2',  color: '#a855f7', bg: 'rgba(168,85,247,0.08)',  title: 'Partner University Booths',       desc: 'Meet representatives from international partner universities and learn about study programs, scholarships, and academic opportunities.' },
-    { icon: 'mic',         color: '#0ea5e9', bg: 'rgba(14,165,233,0.08)',  title: 'Global Talks & Alumni Sharing',   desc: 'Gain firsthand insights from alumni who have studied abroad — covering academic experiences, career prospects, and opportunities encountered.' },
-    { icon: 'globe',       color: '#f97316', bg: 'rgba(249,115,22,0.08)',  title: 'Cultural Exchange & Performances',desc: 'Experience the richness of global cultures through artistic performances and interactive activities showcasing traditions from different countries.' },
-    { icon: 'users',       color: '#10b981', bg: 'rgba(16,185,129,0.08)', title: 'Networking & Interactive Sessions',desc: 'Connect with international experts, alumni, and students from diverse backgrounds in engaging and inspiring sessions.' },
+    { icon: 'building-2',  color: '#1C1C1E', bg: 'rgba(28,28,30,0.06)',   title: 'Partner University Booths',        desc: 'Meet representatives from international partner universities and learn about study programs, scholarships, and academic opportunities.' },
+    { icon: 'mic',         color: '#4A6B8A', bg: 'rgba(74,107,138,0.08)', title: 'Global Talks & Alumni Sharing',    desc: 'Gain firsthand insights from alumni who have studied abroad — covering academic experiences, career prospects, and opportunities encountered.' },
+    { icon: 'globe',       color: '#8B7355', bg: 'rgba(139,115,85,0.08)', title: 'Cultural Exchange & Performances', desc: 'Experience the richness of global cultures through artistic performances and interactive activities showcasing traditions from different countries.' },
+    { icon: 'users',       color: '#4A5235', bg: 'rgba(74,82,53,0.08)',   title: 'Networking & Interactive Sessions', desc: 'Connect with international experts, alumni, and students from diverse backgrounds in engaging and inspiring sessions.' },
   ];
   const cards = features.map(f => `
-    <div class="rounded-xl p-6" style="background:#F8FAFC;border:1px solid rgba(56,189,248,0.1)">
-      <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background:${f.bg}">
-        <i data-lucide="${f.icon}" style="width:24px;height:24px;color:${f.color}"></i>
+    <div class="rounded-xl p-6" style="background:#F8FAFC;border:1px solid rgba(28,28,30,0.07)">
+      <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:${f.bg}">
+        <i data-lucide="${f.icon}" style="width:20px;height:20px;color:${f.color}"></i>
       </div>
-      <h4 class="font-heading font-semibold text-base mb-2" style="color:#0F172A">${aeroEsc(f.title)}</h4>
-      <p class="text-sm leading-relaxed" style="color:#64748B">${aeroEsc(f.desc)}</p>
+      <h4 class="font-heading font-semibold text-base mb-2" style="color:#1C1C1E">${aeroEsc(f.title)}</h4>
+      <p class="text-sm leading-relaxed" style="color:#5C5C5C">${aeroEsc(f.desc)}</p>
     </div>`).join('');
-  return `
-    <div class="card p-8 mb-6">
-      <div class="flex items-center gap-3 mb-6"><span class="accent-line"></span><h2 class="font-heading font-semibold text-2xl" style="color:#0F172A">What to Expect</h2></div>
-      <div class="grid sm:grid-cols-2 gap-4">${cards}</div>
-    </div>`;
+  return `<div class="grid sm:grid-cols-2 gap-4">${cards}</div>`;
 }
 
 function buildAeroContributions() {
   const items = [
-    { color: '#a855f7', bg: 'rgba(168,85,247,0.08)', icon: 'calendar-check', title: '1. Event Planning & Logistics',           desc: 'Planned and coordinated end-to-end event logistics across 50+ stakeholders, including venue setup, scheduling, and operational readiness.' },
-    { color: '#ec4899', bg: 'rgba(236,72,153,0.08)',  icon: 'receipt',        title: '2. Vendor Management & Budgeting',         desc: 'Managed vendor relationships and procurement within an IDR 50–100M per-program budget, ensuring cost-efficient delivery across all event components.' },
-    { color: '#8b5cf6', bg: 'rgba(139,92,246,0.08)', icon: 'building-2',     title: '3. Partner University & Guest Coordination',desc: 'Coordinated partner university booth logistics and facilitated international guest attendance, ensuring smooth communication and on-site experience.' },
-    { color: '#d946ef', bg: 'rgba(217,70,239,0.08)', icon: 'megaphone',      title: '4. Promotion, Operations & Reporting',     desc: 'Led pre-event promotion campaigns, managed on-site operations, and prepared comprehensive post-event completion reports for stakeholders.' },
+    { n:'01', icon:'calendar-check', color:'#1C1C1E', bg:'rgba(28,28,30,0.06)',   title:'Event Planning & Logistics',             desc:'Planned and coordinated end-to-end event logistics across 50+ stakeholders, including venue setup, scheduling, and operational readiness.' },
+    { n:'02', icon:'receipt',        color:'#8B7355', bg:'rgba(139,115,85,0.08)', title:'Vendor Management & Budgeting',           desc:'Managed vendor relationships and procurement within an IDR 50–100M per-program budget, ensuring cost-efficient delivery across all event components.' },
+    { n:'03', icon:'building-2',     color:'#4A6B8A', bg:'rgba(74,107,138,0.08)', title:'Partner University & Guest Coordination', desc:'Coordinated partner university booth logistics and facilitated international guest attendance, ensuring smooth communication and on-site experience.' },
+    { n:'04', icon:'megaphone',      color:'#4A5235', bg:'rgba(74,82,53,0.08)',   title:'Promotion, Operations & Reporting',       desc:'Led pre-event promotion campaigns, managed on-site operations, and prepared comprehensive post-event completion reports for stakeholders.' },
   ];
-  const cards = items.map(i => `
-    <div class="flex items-start gap-4 p-5 rounded-xl border-l-4" style="border-color:${i.color};background:#F8FAFC">
-      <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:${i.bg}">
-        <i data-lucide="${i.icon}" style="width:24px;height:24px;color:${i.color}"></i>
-      </div>
-      <div>
-        <h4 class="font-heading font-semibold text-base mb-1" style="color:#0F172A">${aeroEsc(i.title)}</h4>
-        <p class="text-sm" style="color:#64748B">${aeroEsc(i.desc)}</p>
-      </div>
-    </div>`).join('');
-  return `
-    <div class="card p-8 mb-6">
-      <div class="flex items-center gap-3 mb-6"><span class="accent-line"></span><h2 class="font-heading font-semibold text-2xl" style="color:#0F172A">My Contributions</h2></div>
-      <div class="space-y-4">${cards}</div>
-    </div>`;
+  return items.map(i => `
+   <div class="flex gap-6 py-8" style="border-top:1px solid rgba(28,28,30,0.07)">
+    <div class="flex-shrink-0 w-10 pt-0.5">
+     <span class="font-heading font-bold text-3xl select-none" style="color:rgba(28,28,30,0.1);line-height:1">${i.n}</span>
+    </div>
+    <div class="flex gap-4 flex-1">
+     <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background:${i.bg}">
+      <i data-lucide="${i.icon}" style="width:18px;height:18px;color:${i.color}"></i>
+     </div>
+     <div>
+      <h3 class="font-heading font-semibold text-lg mb-2" style="color:#1C1C1E">${aeroEsc(i.title)}</h3>
+      <p class="text-sm leading-relaxed" style="color:#5C5C5C">${aeroEsc(i.desc)}</p>
+     </div>
+    </div>
+   </div>
+  `).join('');
 }
-
 
 function buildAeroRundown() {
   const sections = AERO_RUNDOWN.map(s => {
     const rows = s.items.map(item => {
       const noteRow = item.note
-        ? `<tr><td></td><td colspan="2" class="pb-2 text-xs italic" style="color:#94A3B8;padding-left:0">${aeroEsc(item.note)}</td></tr>`
+        ? `<tr><td></td><td colspan="2" class="pb-2 text-xs italic" style="color:#9A9A9A;padding-left:0">${aeroEsc(item.note)}</td></tr>`
         : '';
       return `
         <tr>
           <td class="py-1.5 pr-4 text-xs font-mono whitespace-nowrap align-top" style="color:${s.color};width:8rem">${aeroEsc(item.time)}</td>
-          <td class="py-1.5 pr-4 text-sm font-medium align-top" style="color:#0F172A">${aeroEsc(item.activity)}</td>
-          <td class="py-1.5 text-xs align-top" style="color:#94A3B8">${item.venue ? aeroEsc(item.venue) : ''}</td>
+          <td class="py-1.5 pr-4 text-sm font-medium align-top" style="color:#1C1C1E">${aeroEsc(item.activity)}</td>
+          <td class="py-1.5 text-xs align-top" style="color:#9A9A9A">${item.venue ? aeroEsc(item.venue) : ''}</td>
         </tr>${noteRow}`;
     }).join('');
     return `
       <div class="mb-5">
         <div class="flex items-center gap-3 mb-3">
-          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold" style="background:${s.color}22;color:${s.color}">${aeroEsc(s.day)}</span>
-          <span class="font-heading font-semibold text-sm" style="color:#0F172A">${aeroEsc(s.date)} — ${aeroEsc(s.label)}</span>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold" style="background:${s.color}18;color:${s.color}">${aeroEsc(s.day)}</span>
+          <span class="font-heading font-semibold text-sm" style="color:#1C1C1E">${aeroEsc(s.date)} — ${aeroEsc(s.label)}</span>
         </div>
-        <div class="rounded-xl overflow-auto" style="border:1px solid rgba(56,189,248,0.1)">
+        <div class="rounded-xl overflow-auto" style="border:1px solid rgba(28,28,30,0.08)">
           <table class="w-full" style="border-collapse:collapse;min-width:500px">
             <tbody style="padding:0 1rem">${rows}</tbody>
           </table>
         </div>
       </div>`;
   }).join('');
-  return `
-    <div class="card p-8 mb-6">
-      <div class="flex items-center gap-3 mb-2"><span class="accent-line"></span><h2 class="font-heading font-semibold text-2xl" style="color:#0F172A">Event Rundown</h2></div>
-      <p class="text-sm mb-6" style="color:#64748B">9–10 May 2025 · Universitas Airlangga, Surabaya</p>
-      ${sections}
-    </div>`;
+  return sections;
 }
 
 function buildAeroParticipants() {
   const cornerCards = AERO_PARTICIPANTS.corners.map(c => `
-    <div class="flex items-center gap-3 px-4 py-3 rounded-lg" style="background:#F8FAFC;border:1px solid rgba(56,189,248,0.1)">
-      <span class="text-xs font-bold px-2 py-0.5 rounded" style="background:rgba(168,85,247,0.12);color:#a855f7">B${c.booth}</span>
+    <div class="flex items-center gap-3 px-4 py-3 rounded-lg" style="background:#F8FAFC;border:1px solid rgba(28,28,30,0.08)">
+      <span class="text-xs font-bold px-2 py-0.5 rounded" style="background:rgba(28,28,30,0.08);color:#1C1C1E">B${c.booth}</span>
       <div>
-        <p class="text-sm font-medium" style="color:#0F172A">${aeroEsc(c.name)}</p>
-        <p class="text-xs" style="color:#94A3B8">${aeroEsc(c.note)}</p>
+        <p class="text-sm font-medium" style="color:#1C1C1E">${aeroEsc(c.name)}</p>
+        <p class="text-xs" style="color:#9A9A9A">${aeroEsc(c.note)}</p>
       </div>
     </div>`).join('');
 
   const instBlocks = AERO_PARTICIPANTS.institutions.map(g => {
     const rows = g.orgs.map(o => {
       const badge = o.booth
-        ? `<span class="text-xs font-bold px-1.5 py-0.5 rounded flex-shrink-0" style="background:rgba(168,85,247,0.12);color:#a855f7">B${o.booth}</span>`
+        ? `<span class="text-xs font-bold px-1.5 py-0.5 rounded flex-shrink-0" style="background:rgba(28,28,30,0.08);color:#1C1C1E">B${o.booth}</span>`
         : '';
       return `<div class="flex items-center justify-between gap-2">
-        <span class="text-sm" style="color:#0F172A">${aeroEsc(o.name)}</span>${badge}
+        <span class="text-sm" style="color:#1C1C1E">${aeroEsc(o.name)}</span>${badge}
       </div>`;
     }).join('');
     return `
-      <div class="rounded-lg p-4" style="background:#F8FAFC;border:1px solid rgba(56,189,248,0.1)">
-        <p class="text-xs font-semibold mb-2" style="color:#a855f7">${g.flag} ${aeroEsc(g.country)}</p>
+      <div class="rounded-lg p-4" style="background:#F8FAFC;border:1px solid rgba(28,28,30,0.08)">
+        <p class="text-xs font-semibold mb-2" style="color:#5C5C5C">${g.flag} ${aeroEsc(g.country)}</p>
         <div class="space-y-1.5">${rows}</div>
       </div>`;
   }).join('');
 
   const studentCards = AERO_PARTICIPANTS.studentDelegations.map(c => {
     const badge = c.booth
-      ? `<span class="text-xs font-bold ml-auto" style="color:#a855f7">B${c.booth}</span>`
+      ? `<span class="text-xs font-bold ml-auto" style="color:#1C1C1E">B${c.booth}</span>`
       : '';
     return `
-      <div class="flex items-center gap-2 px-3 py-2 rounded-lg" style="background:#F8FAFC;border:1px solid rgba(56,189,248,0.1)">
+      <div class="flex items-center gap-2 px-3 py-2 rounded-lg" style="background:#F8FAFC;border:1px solid rgba(28,28,30,0.08)">
         <span class="text-base">${c.flag}</span>
-        <span class="text-sm" style="color:#0F172A">${aeroEsc(c.country)}</span>
+        <span class="text-sm" style="color:#1C1C1E">${aeroEsc(c.country)}</span>
         ${badge}
       </div>`;
   }).join('');
 
   return `
-    <div class="card p-8 mb-6">
-      <div class="flex items-center gap-3 mb-2"><span class="accent-line"></span><h2 class="font-heading font-semibold text-2xl" style="color:#0F172A">Participating Institutions</h2></div>
-      <p class="text-sm mb-8" style="color:#64748B">19 booths · 12 partner universities & institutions · 9 international student delegations</p>
-
-      <h3 class="font-heading font-semibold text-base mb-3" style="color:#0F172A">UNAIR Internal Corners</h3>
-      <div class="grid sm:grid-cols-2 gap-2 mb-8">${cornerCards}</div>
-
-      <h3 class="font-heading font-semibold text-base mb-3" style="color:#0F172A">Partner Universities & Institutions <span class="text-sm font-normal ml-1" style="color:#64748B">— 5 countries</span></h3>
-      <div class="grid md:grid-cols-2 gap-3 mb-8">${instBlocks}</div>
-
-      <h3 class="font-heading font-semibold text-base mb-3" style="color:#0F172A">International Student Delegations <span class="text-sm font-normal ml-1" style="color:#64748B">— representing their home countries</span></h3>
-      <div class="grid sm:grid-cols-3 gap-2">${studentCards}</div>
-    </div>`;
+    <h3 class="font-heading font-semibold text-base mb-3" style="color:#1C1C1E">UNAIR Internal Corners</h3>
+    <div class="grid sm:grid-cols-2 gap-2 mb-8">${cornerCards}</div>
+    <h3 class="font-heading font-semibold text-base mb-3" style="color:#1C1C1E">Partner Universities & Institutions <span class="text-sm font-normal ml-1" style="color:#9A9A9A">— 5 countries</span></h3>
+    <div class="grid md:grid-cols-2 gap-3 mb-8">${instBlocks}</div>
+    <h3 class="font-heading font-semibold text-base mb-3" style="color:#1C1C1E">International Student Delegations <span class="text-sm font-normal ml-1" style="color:#9A9A9A">— representing their home countries</span></h3>
+    <div class="grid sm:grid-cols-3 gap-2">${studentCards}</div>`;
 }
 
 function buildAeroBudget() {
@@ -342,22 +326,18 @@ function buildAeroBudget() {
       <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(0,0,0,0.06)">
         <i data-lucide="${cat.icon}" style="width:20px;height:20px;color:${cat.color}"></i>
       </div>
-      <p class="text-sm font-semibold flex-1" style="color:#0F172A">${aeroEsc(cat.name)}</p>
+      <p class="text-sm font-semibold flex-1" style="color:#1C1C1E">${aeroEsc(cat.name)}</p>
       <p class="font-heading font-bold text-base" style="color:${cat.color}">${fmtRp(cat.total)}</p>
     </div>`).join('');
 
   return `
-    <div class="card p-8 mb-6">
-      <div class="flex items-center gap-3 mb-2"><span class="accent-line"></span><h2 class="font-heading font-semibold text-2xl" style="color:#0F172A">Budget Overview</h2></div>
-      <p class="text-sm mb-6" style="color:#64748B">Budget breakdown across 4 categories — AERO 2025</p>
-      <div class="space-y-3 mb-6">${catRows}</div>
-      <div class="rounded-xl p-5 flex items-center justify-between" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff);border:2px solid rgba(168,85,247,0.3)">
-        <div>
-          <p class="text-sm font-semibold" style="color:#64748B">Grand Total</p>
-          <p class="font-heading font-bold text-2xl mt-1" style="color:#a855f7">${fmtRp(AERO_BUDGET.grandTotal)}</p>
-        </div>
-        <i data-lucide="receipt" style="width:40px;height:40px;color:#a855f7;opacity:0.3"></i>
+    <div class="space-y-3 mb-6">${catRows}</div>
+    <div class="rounded-xl p-5 flex items-center justify-between" style="background:#1C1C1E;border:1px solid rgba(255,255,255,0.08)">
+      <div>
+        <p class="text-xs uppercase tracking-wider mb-1" style="color:rgba(255,255,255,0.5)">Grand Total</p>
+        <p class="font-heading font-bold text-2xl" style="color:#fff">${fmtRp(AERO_BUDGET.grandTotal)}</p>
       </div>
+      <i data-lucide="receipt" style="width:36px;height:36px;color:rgba(255,255,255,0.2)"></i>
     </div>`;
 }
 
@@ -367,20 +347,60 @@ function aeroInitPage() {
   const el = document.getElementById('page-aero');
   if (!el) return;
   el.innerHTML = `
+   <div class="page-hero-banner relative overflow-hidden" style="background:linear-gradient(135deg,#1C1C1E 0%,#2C2C2E 60%,#3C3C3E 100%);padding:64px 0 48px">
+    <div class="absolute -right-16 -top-16 w-80 h-80 rounded-full" style="background:rgba(255,255,255,0.03)"></div>
+    <div class="absolute right-24 bottom-8 w-48 h-48 rounded-full" style="border:2px solid rgba(255,255,255,0.05)"></div>
+    <div class="absolute inset-0 flex items-center justify-end overflow-hidden pr-8 pointer-events-none select-none" aria-hidden="true">
+     <span class="font-heading font-bold" style="font-size:clamp(5rem,15vw,12rem);color:rgba(255,255,255,0.04);letter-spacing:-.04em;line-height:1">AERO</span>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+     <button onclick="goToPage('projects-overview')" class="flex items-center gap-2 mb-8" style="color:rgba(255,255,255,0.6)"><i data-lucide="arrow-left" style="width:16px;height:16px"></i> Back</button>
+     <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold mb-5 uppercase tracking-wider" style="background:rgba(255,255,255,0.1);color:#fff">Project Management</span>
+     <h1 class="font-heading font-bold mb-3 text-white" style="font-size:clamp(2.5rem,6vw,4rem);letter-spacing:-.02em">AERO 2025</h1>
+     <p class="text-base max-w-2xl" style="color:rgba(255,255,255,0.65)">Airlangga Expanding Reach & Opportunities — annual internationalization exhibition connecting UNAIR students with global partners, alumni, and opportunities. 9–10 May 2025, Surabaya.</p>
+    </div>
+   </div>
+
    <div class="max-w-6xl mx-auto px-6">
-    <button onclick="goToPage('projects-overview')" class="flex items-center gap-2 mb-6" style="color:#a855f7"><i data-lucide="arrow-left" style="width:16px;height:16px"></i> Back</button>
-    <div class="card p-8 mb-8" style="background:linear-gradient(135deg,#a855f7,#e879f9)">
-     <h1 class="font-heading font-bold text-4xl mb-3 text-white">AERO 2025</h1>
-     <p class="text-lg text-white/90">Airlangga Expanding Reach &amp; Opportunities · 9–10 May 2025, Surabaya</p>
+    <div class="flex flex-wrap gap-10 py-10" style="border-bottom:1px solid rgba(28,28,30,0.08)">
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">19</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Exhibition Booths</div></div>
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">12</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Partner Universities</div></div>
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">50+</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Stakeholders</div></div>
+     <div><div class="font-heading font-bold text-4xl" style="color:#1C1C1E">Rp 149.7M</div><div class="text-xs uppercase tracking-wider mt-1" style="color:#9A9A9A">Total Budget</div></div>
     </div>
-    <div class="mb-8">
-     <p class="text-lg max-w-4xl leading-relaxed" style="color:#64748B">AERO is an internationalization event that opens doors for Universitas Airlangga students to explore global opportunities in education, careers, and cultural exchange. More than just an event, AERO reflects UNAIR HEBAT values — shaping students into future-ready individuals with strong character, global insight, and a competitive edge. Through AERO, students engage directly with international universities, alumni, and professionals, gaining knowledge and networks to prepare them for the global stage.</p>
-    </div>
+   </div>
+
+   <div class="max-w-6xl mx-auto px-6 py-14">
+    <p class="text-lg max-w-3xl leading-relaxed mb-14" style="color:#5C5C5C">AERO is an internationalization event that opens doors for Universitas Airlangga students to explore global opportunities in education, careers, and cultural exchange — shaping students into future-ready individuals with global insight. Through AERO, students engage directly with international universities, alumni, and professionals.</p>
+
+    <div class="flex items-center gap-3 mb-3"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#5C5C5C">What to Expect</span></div>
+    <h2 class="font-heading font-bold text-3xl mb-8" style="color:#1C1C1E">Program Highlights</h2>
     ${buildAeroWhatToExpect()}
-    ${buildAeroContributions()}
-    ${buildAeroParticipants()}
-    ${buildAeroRundown()}
-    ${buildAeroBudget()}
+
+    <div class="flex items-center gap-3 mb-3 mt-16"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#5C5C5C">My Role</span></div>
+    <h2 class="font-heading font-bold text-3xl mb-2" style="color:#1C1C1E">Contributions</h2>
+    <div class="mt-6">${buildAeroContributions()}</div>
+   </div>
+
+   <div style="background:#F2ECE4;border-top:1px solid rgba(28,28,30,0.07)">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+
+     <div class="flex items-center gap-3 mb-3"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#5C5C5C">Institutions</span></div>
+     <h2 class="font-heading font-bold text-3xl mb-2" style="color:#1C1C1E">Participating Institutions</h2>
+     <p class="text-sm mb-10" style="color:#5C5C5C">19 booths · 12 partner universities & institutions · 9 international student delegations</p>
+     ${buildAeroParticipants()}
+
+     <div class="flex items-center gap-3 mb-3 mt-16"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#5C5C5C">Schedule</span></div>
+     <h2 class="font-heading font-bold text-3xl mb-2" style="color:#1C1C1E">Event Rundown</h2>
+     <p class="text-sm mb-8" style="color:#5C5C5C">9–10 May 2025 · Universitas Airlangga, Surabaya</p>
+     ${buildAeroRundown()}
+
+     <div class="flex items-center gap-3 mb-3 mt-16"><span class="accent-line"></span><span class="text-sm font-semibold" style="color:#5C5C5C">Financials</span></div>
+     <h2 class="font-heading font-bold text-3xl mb-2" style="color:#1C1C1E">Budget Overview</h2>
+     <p class="text-sm mb-8" style="color:#5C5C5C">Budget breakdown across 4 categories — AERO 2025</p>
+     ${buildAeroBudget()}
+
+    </div>
    </div>`;
 
   if (window.lucide) lucide.createIcons();
